@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050B1A">
+<title>Terms of Service — FishConnect</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand: #4F7AFF;
+  --brand-light: #88A4FF;
+  --bg-1: #050B1A;
+  --bg-2: #0A1124;
+  --bg-3: #0F1730;
+  --text-1: #fff;
+  --text-2: rgba(255,255,255,.78);
+  --text-3: rgba(255,255,255,.55);
+  --line: rgba(255,255,255,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-1); color: var(--text-2);
+  font-family: "IBM Plex Sans Thai", "Inter", -apple-system, system-ui, sans-serif;
+  font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--brand-light); }
+body.lang-th .lang-en { display: none !important; }
+body.lang-en .lang-th { display: none !important; }
+
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(5,11,26,.75); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 920px; margin: 0 auto; padding: 0 32px; height: 88px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo img { height: 64px; width: auto; }
+.lang-switch {
+  display: flex; padding: 4px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid var(--line);
+}
+.lang-switch button {
+  padding: 6px 12px; border-radius: 999px; border: none; cursor: pointer;
+  font-size: 13px; font-weight: 600; color: var(--text-3);
+  font-family: "Inter", sans-serif; background: transparent;
+}
+.lang-switch button.active { background: #fff; color: var(--bg-1); }
+
+main { max-width: 800px; margin: 60px auto 100px; padding: 0 32px; position: relative; z-index: 1; }
+@media (max-width: 600px) { main { padding: 0 20px; } }
+
+h1 {
+  color: var(--text-1); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 800; letter-spacing: -.03em;
+  font-size: clamp(36px, 5vw, 56px); line-height: 1.1; margin-bottom: 16px;
+}
+h2 {
+  color: var(--text-1); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(22px, 2.4vw, 28px); margin: 48px 0 16px;
+}
+h3 {
+  color: var(--text-1); font-weight: 600; font-size: 17px;
+  margin: 24px 0 8px;
+}
+p { color: var(--text-2); margin-bottom: 16px; }
+.eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--brand-light); margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+.updated { color: var(--text-3); font-size: 14px; margin-bottom: 40px; }
+.toc {
+  background: var(--bg-2); padding: 24px 28px;
+  border-radius: 16px; margin-bottom: 40px;
+}
+.toc h4 { color: var(--text-1); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; font-family: "Inter", sans-serif; }
+.toc ol { padding-left: 20px; color: var(--text-2); font-size: 14.5px; }
+.toc ol li { margin: 6px 0; }
+.toc a { color: var(--text-2); transition: color .15s; }
+.toc a:hover { color: var(--brand-light); }
+
+ul, ol { padding-left: 22px; margin: 12px 0 16px; color: var(--text-2); }
+ul li, ol li { margin-bottom: 8px; }
+strong { color: var(--text-1); }
+.back { display: inline-block; color: var(--text-3); margin-bottom: 24px; font-size: 14px; }
+.back:hover { color: var(--brand-light); }
+
+footer {
+  background: #03060F; color: var(--text-3); padding: 40px 0;
+  font-size: 14px; text-align: center; border-top: 1px solid var(--line);
+}
+</style>
+</head>
+<body class="lang-th">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
+    <div class="lang-switch">
+      <button data-lang="th" class="active" type="button">TH</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <a href="index.html" class="back">← <span class="lang-th">กลับหน้าแรก</span><span class="lang-en">Back to Home</span></a>
+  <span class="eyebrow">Terms of Service</span>
+  <h1><span class="lang-th">เงื่อนไขและข้อกำหนดการบริการ</span><span class="lang-en">Terms of Service</span></h1>
+  <p class="updated"><span class="lang-th">มีผลบังคับใช้: 27 เมษายน 2569</span><span class="lang-en">Effective: 27 April 2026</span></p>
+
+  <p>
+    <span class="lang-th">เอกสารนี้คือข้อตกลงทางกฎหมายระหว่างคุณ ("ผู้ใช้") กับ บริษัท ฟิช คอนเนคท์ จำกัด ("FishConnect", "เรา") เกี่ยวกับการใช้แอปพลิเคชัน FishConnect เว็บไซต์ <a href="https://fishconnect.co">fishconnect.co</a> และบริการที่เกี่ยวข้อง (รวมเรียกว่า "บริการ") โดยการสมัครใช้งานหรือใช้บริการ คุณยอมรับเงื่อนไขนี้</span>
+    <span class="lang-en">This document is a legal agreement between you ("User") and FishConnect Co., Ltd. ("FishConnect", "we", "us") regarding the FishConnect mobile app, the website at <a href="https://fishconnect.co">fishconnect.co</a>, and related services (collectively, the "Service"). By signing up or using the Service, you accept these Terms.</span>
+  </p>
+
+  <div class="toc">
+    <h4><span class="lang-th">สารบัญ</span><span class="lang-en">Contents</span></h4>
+    <ol>
+      <li><a href="#s1"><span class="lang-th">การยอมรับเงื่อนไข</span><span class="lang-en">Acceptance</span></a></li>
+      <li><a href="#s2"><span class="lang-th">บริการของเรา</span><span class="lang-en">The Service</span></a></li>
+      <li><a href="#s3"><span class="lang-th">บัญชีผู้ใช้</span><span class="lang-en">Accounts</span></a></li>
+      <li><a href="#s4"><span class="lang-th">เนื้อหาของผู้ใช้</span><span class="lang-en">User Content</span></a></li>
+      <li><a href="#s5"><span class="lang-th">กฎของ Marketplace</span><span class="lang-en">Marketplace Rules</span></a></li>
+      <li><a href="#s6"><span class="lang-th">ค่าธรรมเนียมและการชำระเงิน</span><span class="lang-en">Fees & Payments</span></a></li>
+      <li><a href="#s7"><span class="lang-th">ข้อห้าม</span><span class="lang-en">Prohibited Conduct</span></a></li>
+      <li><a href="#s8"><span class="lang-th">ทรัพย์สินทางปัญญา</span><span class="lang-en">Intellectual Property</span></a></li>
+      <li><a href="#s9"><span class="lang-th">ข้อจำกัดความรับผิด</span><span class="lang-en">Disclaimers & Liability</span></a></li>
+      <li><a href="#s10"><span class="lang-th">การยุติบริการ</span><span class="lang-en">Termination</span></a></li>
+      <li><a href="#s11"><span class="lang-th">กฎหมายที่ใช้บังคับ</span><span class="lang-en">Governing Law</span></a></li>
+      <li><a href="#s12"><span class="lang-th">การเปลี่ยนแปลงเงื่อนไข</span><span class="lang-en">Changes</span></a></li>
+      <li><a href="#s13"><span class="lang-th">ติดต่อ</span><span class="lang-en">Contact</span></a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1"><span class="lang-th">1. การยอมรับเงื่อนไข</span><span class="lang-en">1. Acceptance</span></h2>
+  <p><span class="lang-th">การสร้างบัญชีหรือใช้บริการ ถือว่าคุณยืนยันว่าคุณ (ก) มีอายุไม่ต่ำกว่า 18 ปี หรือได้รับความยินยอมจากผู้ปกครอง (ข) มีอำนาจตามกฎหมายในการทำสัญญานี้ และ (ค) อ่านและยอมรับเงื่อนไขทั้งหมด รวมถึง <a href="privacy.html">นโยบายความเป็นส่วนตัว</a> และ <a href="cookies.html">นโยบายคุกกี้</a></span>
+  <span class="lang-en">By creating an account or using the Service, you confirm that (a) you are at least 18 years old or have parental consent, (b) you have legal capacity to enter this agreement, and (c) you have read and accepted these Terms together with our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookie Policy</a>.</span></p>
+
+  <h2 id="s2"><span class="lang-th">2. บริการของเรา</span><span class="lang-en">2. The Service</span></h2>
+  <p><span class="lang-th">FishConnect ให้บริการบันทึกข้อมูลปลา (Pedigree), การจัดการสินทรัพย์ดิจิทัล (My Fish), ตลาดซื้อขายปลาออนไลน์ (Marketplace) และคอมมิวนิตี้ผู้เลี้ยงปลา (Community) เราอาจปรับปรุง เพิ่มเติม หรือยกเลิกฟีเจอร์ใดๆ โดยแจ้งให้ทราบล่วงหน้าตามสมควร</span>
+  <span class="lang-en">FishConnect provides fish records (Pedigree), digital asset management (My Fish), an online marketplace, and a community network. We may improve, add, or discontinue features with reasonable notice.</span></p>
+
+  <h2 id="s3"><span class="lang-th">3. บัญชีผู้ใช้</span><span class="lang-en">3. Accounts</span></h2>
+  <ul>
+    <li><span class="lang-th">คุณต้องให้ข้อมูลที่ถูกต้อง ครบถ้วน และเป็นปัจจุบัน</span><span class="lang-en">You must provide accurate, complete, and up-to-date information.</span></li>
+    <li><span class="lang-th">คุณรับผิดชอบต่อความปลอดภัยของรหัสผ่านและกิจกรรมในบัญชีของคุณ</span><span class="lang-en">You are responsible for the security of your password and all activity on your account.</span></li>
+    <li><span class="lang-th">หนึ่งคนสามารถมีได้หนึ่งบัญชีต่อบุคคล/นิติบุคคล</span><span class="lang-en">One account per person or entity.</span></li>
+    <li><span class="lang-th">เราอาจระงับหรือลบบัญชีที่ฝ่าฝืนเงื่อนไข</span><span class="lang-en">We may suspend or terminate accounts that violate these Terms.</span></li>
+  </ul>
+
+  <h2 id="s4"><span class="lang-th">4. เนื้อหาของผู้ใช้</span><span class="lang-en">4. User Content</span></h2>
+  <p><span class="lang-th">คุณยังคงเป็นเจ้าของเนื้อหาที่อัปโหลด (รูปปลา, ประวัติ, โพสต์, ข้อความ) แต่ให้สิทธิ์เราในการใช้ จัดเก็บ ทำสำเนา และแสดงผลเพื่อให้บริการ คุณรับประกันว่าเนื้อหาที่คุณอัปโหลดไม่ละเมิดสิทธิ์ของผู้อื่น</span>
+  <span class="lang-en">You retain ownership of content you upload (fish photos, records, posts, messages) but grant us a license to host, store, copy, and display it to operate the Service. You warrant your content does not infringe others' rights.</span></p>
+
+  <h2 id="s5"><span class="lang-th">5. กฎของ Marketplace</span><span class="lang-en">5. Marketplace Rules</span></h2>
+  <ul>
+    <li><span class="lang-th">ผู้ขายต้องระบุข้อมูลปลาที่ถูกต้อง ครบถ้วน — รวมถึงสายพันธุ์ อายุ สุขภาพ</span><span class="lang-en">Sellers must list accurate, complete information — including breed, age, and health.</span></li>
+    <li><span class="lang-th">ห้ามขายสัตว์คุ้มครองหรือสัตว์ที่ผิดกฎหมาย</span><span class="lang-en">Listing protected or illegal species is prohibited.</span></li>
+    <li><span class="lang-th">การโอนสิทธิ์ปลาต้องผ่านระบบในแอปเท่านั้น</span><span class="lang-en">Ownership transfers must go through the in-app system.</span></li>
+    <li><span class="lang-th">ความรับผิดในการขนส่งและการรับประกันปลาเป็นของผู้ขายและผู้ซื้อ FishConnect ไม่เป็นคู่สัญญาในการซื้อขาย</span><span class="lang-en">Shipping liability and fish warranties are between buyer and seller. FishConnect is not a party to the transaction.</span></li>
+  </ul>
+
+  <h2 id="s6"><span class="lang-th">6. ค่าธรรมเนียมและการชำระเงิน</span><span class="lang-en">6. Fees & Payments</span></h2>
+  <p><span class="lang-th">การใช้งานทั่วไปฟรี Marketplace อาจคิดค่าธรรมเนียมเล็กน้อยจากการขายสำเร็จ (เช่น 3-5% ของราคาขาย) เราจะแจ้งอัตราค่าธรรมเนียมล่วงหน้าก่อนการเปลี่ยนแปลงใดๆ</span>
+  <span class="lang-en">General use is free. The Marketplace may charge a small fee on completed sales (e.g., 3–5% of the sale price). We will provide advance notice before changing any fee schedule.</span></p>
+
+  <h2 id="s7"><span class="lang-th">7. ข้อห้าม</span><span class="lang-en">7. Prohibited Conduct</span></h2>
+  <ul>
+    <li><span class="lang-th">ปลอมแปลงประวัติปลา หรือสายพันธุ์</span><span class="lang-en">Falsifying fish records or pedigree.</span></li>
+    <li><span class="lang-th">แอบอ้างเป็นบุคคลอื่นหรือแบรนด์อื่น</span><span class="lang-en">Impersonating other persons or brands.</span></li>
+    <li><span class="lang-th">โพสต์เนื้อหาที่ผิดกฎหมาย ลามก หรือคุกคาม</span><span class="lang-en">Posting illegal, obscene, or harassing content.</span></li>
+    <li><span class="lang-th">พยายามแฮก สแปม หรือรบกวนการทำงานของระบบ</span><span class="lang-en">Hacking, spamming, or interfering with the system.</span></li>
+  </ul>
+
+  <h2 id="s8"><span class="lang-th">8. ทรัพย์สินทางปัญญา</span><span class="lang-en">8. Intellectual Property</span></h2>
+  <p><span class="lang-th">โลโก้ ชื่อ "FishConnect" ดีไซน์ของแอปและเว็บไซต์ เป็นทรัพย์สินทางปัญญาของบริษัท ฟิช คอนเนคท์ จำกัด การใช้งานนอกเหนือจากที่อนุญาตต้องได้รับความยินยอมเป็นลายลักษณ์อักษร</span>
+  <span class="lang-en">The logo, "FishConnect" name, and the design of our app and website are intellectual property of FishConnect Co., Ltd. Use beyond what is permitted requires written consent.</span></p>
+
+  <h2 id="s9"><span class="lang-th">9. ข้อจำกัดความรับผิด</span><span class="lang-en">9. Disclaimers & Liability</span></h2>
+  <p><span class="lang-th">บริการให้ตามสภาพ ("AS IS") เราไม่รับประกันว่าจะปราศจากข้อผิดพลาดหรือใช้งานได้ตลอดเวลา ภายในขอบเขตที่กฎหมายอนุญาต ความรับผิดของเราจำกัดไม่เกินค่าธรรมเนียมที่คุณจ่ายในรอบ 12 เดือนที่ผ่านมา</span>
+  <span class="lang-en">The Service is provided "AS IS" without warranty that it will be error-free or available at all times. To the extent permitted by law, our liability is capped at the fees you paid in the prior 12 months.</span></p>
+
+  <h2 id="s10"><span class="lang-th">10. การยุติบริการ</span><span class="lang-en">10. Termination</span></h2>
+  <p><span class="lang-th">คุณสามารถปิดบัญชีได้ตลอดเวลาผ่านการตั้งค่า เราอาจระงับหรือยุติการให้บริการกับบัญชีที่ละเมิดเงื่อนไข ข้อมูลปลาที่โอนไปแล้วยังคงอยู่กับเจ้าของใหม่ เพื่อให้ประวัติย้อนหลังไม่ขาดสาย</span>
+  <span class="lang-en">You may close your account anytime through Settings. We may suspend or terminate accounts that violate these Terms. Records that have been transferred remain with the new owner so historical lineage stays intact.</span></p>
+
+  <h2 id="s11"><span class="lang-th">11. กฎหมายที่ใช้บังคับ</span><span class="lang-en">11. Governing Law</span></h2>
+  <p><span class="lang-th">เงื่อนไขนี้อยู่ภายใต้กฎหมายของราชอาณาจักรไทย ข้อพิพาทใดๆ จะอยู่ในอำนาจของศาลที่มีเขตอำนาจในประเทศไทย</span>
+  <span class="lang-en">These Terms are governed by the laws of the Kingdom of Thailand. Disputes will be subject to the jurisdiction of competent courts in Thailand.</span></p>
+
+  <h2 id="s12"><span class="lang-th">12. การเปลี่ยนแปลงเงื่อนไข</span><span class="lang-en">12. Changes</span></h2>
+  <p><span class="lang-th">เราอาจแก้ไขเงื่อนไขนี้เป็นระยะ การเปลี่ยนแปลงสำคัญจะแจ้งล่วงหน้าทางอีเมลหรือผ่านแอป การใช้บริการต่อไปหลังการเปลี่ยนแปลงถือเป็นการยอมรับ</span>
+  <span class="lang-en">We may revise these Terms periodically. Material changes will be communicated by email or in-app. Continued use after changes constitutes acceptance.</span></p>
+
+  <h2 id="s13"><span class="lang-th">13. ติดต่อ</span><span class="lang-en">13. Contact</span></h2>
+  <p><span class="lang-th">บริษัท ฟิช คอนเนคท์ จำกัด<br>อีเมล: <a href="mailto:legal@fishconnect.co">legal@fishconnect.co</a><br>ทั่วไป: <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span>
+  <span class="lang-en">FishConnect Co., Ltd.<br>Legal: <a href="mailto:legal@fishconnect.co">legal@fishconnect.co</a><br>General: <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span></p>
+</main>
+
+<footer>
+  <p>© 2026 FishConnect Co., Ltd. — Built in Thailand 🇹🇭</p>
+</footer>
+
+<script>
+const savedLang = localStorage.getItem('fc_lang') || 'th';
+setLang(savedLang);
+document.querySelectorAll('.lang-switch button').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+function setLang(lang) {
+  document.body.classList.remove('lang-th', 'lang-en');
+  document.body.classList.add('lang-' + lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-switch button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('fc_lang', lang);
+}
+</script>
+</body>
+</html>

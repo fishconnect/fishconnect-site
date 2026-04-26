@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050B1A">
+<title>Privacy Policy — FishConnect</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand: #4F7AFF;
+  --brand-light: #88A4FF;
+  --bg-1: #050B1A;
+  --bg-2: #0A1124;
+  --bg-3: #0F1730;
+  --text-1: #fff;
+  --text-2: rgba(255,255,255,.78);
+  --text-3: rgba(255,255,255,.55);
+  --line: rgba(255,255,255,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-1); color: var(--text-2);
+  font-family: "IBM Plex Sans Thai", "Inter", -apple-system, system-ui, sans-serif;
+  font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--brand-light); }
+body.lang-th .lang-en { display: none !important; }
+body.lang-en .lang-th { display: none !important; }
+
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(5,11,26,.75); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 920px; margin: 0 auto; padding: 0 32px; height: 88px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo img { height: 64px; width: auto; }
+.lang-switch {
+  display: flex; padding: 4px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid var(--line);
+}
+.lang-switch button {
+  padding: 6px 12px; border-radius: 999px; border: none; cursor: pointer;
+  font-size: 13px; font-weight: 600; color: var(--text-3);
+  font-family: "Inter", sans-serif; background: transparent;
+}
+.lang-switch button.active { background: #fff; color: var(--bg-1); }
+
+main { max-width: 800px; margin: 60px auto 100px; padding: 0 32px; }
+@media (max-width: 600px) { main { padding: 0 20px; } }
+
+h1 {
+  color: var(--text-1); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 800; letter-spacing: -.03em;
+  font-size: clamp(36px, 5vw, 56px); line-height: 1.1; margin-bottom: 16px;
+}
+h2 {
+  color: var(--text-1); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(22px, 2.4vw, 28px); margin: 48px 0 16px;
+}
+h3 {
+  color: var(--text-1); font-weight: 600; font-size: 17px;
+  margin: 24px 0 8px;
+}
+p { color: var(--text-2); margin-bottom: 16px; }
+.eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--brand-light); margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+.updated { color: var(--text-3); font-size: 14px; margin-bottom: 40px; }
+.toc {
+  background: var(--bg-2); padding: 24px 28px;
+  border-radius: 16px; margin-bottom: 40px;
+}
+.toc h4 { color: var(--text-1); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; font-family: "Inter", sans-serif; }
+.toc ol { padding-left: 20px; color: var(--text-2); font-size: 14.5px; }
+.toc ol li { margin: 6px 0; }
+.toc a { color: var(--text-2); transition: color .15s; }
+.toc a:hover { color: var(--brand-light); }
+
+ul, ol { padding-left: 22px; margin: 12px 0 16px; color: var(--text-2); }
+ul li, ol li { margin-bottom: 8px; }
+strong { color: var(--text-1); }
+table {
+  width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+  font-size: 14.5px;
+}
+th, td {
+  padding: 12px 16px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  background: var(--bg-3); color: var(--text-1); font-weight: 600;
+  font-size: 12px; letter-spacing: .04em; text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+.back { display: inline-block; color: var(--text-3); margin-bottom: 24px; font-size: 14px; }
+.back:hover { color: var(--brand-light); }
+.callout {
+  background: var(--bg-2); padding: 20px 24px; border-radius: 12px;
+  border-left: 3px solid var(--brand); margin: 16px 0;
+  color: var(--text-2); font-size: 14.5px;
+}
+
+footer {
+  background: #03060F; color: var(--text-3); padding: 40px 0;
+  font-size: 14px; text-align: center; border-top: 1px solid var(--line);
+}
+</style>
+</head>
+<body class="lang-th">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
+    <div class="lang-switch">
+      <button data-lang="th" class="active" type="button">TH</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <a href="index.html" class="back">← <span class="lang-th">กลับหน้าแรก</span><span class="lang-en">Back to Home</span></a>
+  <span class="eyebrow">Privacy Policy</span>
+  <h1><span class="lang-th">นโยบายความเป็นส่วนตัว</span><span class="lang-en">Privacy Policy</span></h1>
+  <p class="updated"><span class="lang-th">มีผลบังคับใช้: 27 เมษายน 2569</span><span class="lang-en">Effective: 27 April 2026</span></p>
+
+  <p><span class="lang-th">บริษัท ฟิช คอนเนคท์ จำกัด ("FishConnect", "เรา") ให้ความสำคัญกับข้อมูลส่วนบุคคลของคุณ นโยบายนี้อธิบายว่าเราเก็บ ใช้ และแบ่งปันข้อมูลของคุณอย่างไร เมื่อคุณใช้แอปพลิเคชัน FishConnect และ <a href="https://fishconnect.co">fishconnect.co</a></span>
+  <span class="lang-en">FishConnect Co., Ltd. ("FishConnect", "we", "us") respects your privacy. This policy describes how we collect, use, and share your information when you use the FishConnect app and <a href="https://fishconnect.co">fishconnect.co</a>.</span></p>
+
+  <div class="callout">
+    <span class="lang-th"><strong>สรุปสั้น:</strong> เราเก็บข้อมูลที่จำเป็นต่อการให้บริการเท่านั้น ไม่ขายข้อมูลส่วนตัวให้บุคคลที่สาม คุณควบคุม แก้ไข หรือลบข้อมูลของคุณได้ตลอดเวลา</span>
+    <span class="lang-en"><strong>Quick summary:</strong> We collect only what's needed to run the Service, we never sell your personal data to third parties, and you can access, correct, or delete your data at any time.</span>
+  </div>
+
+  <div class="toc">
+    <h4><span class="lang-th">สารบัญ</span><span class="lang-en">Contents</span></h4>
+    <ol>
+      <li><a href="#p1"><span class="lang-th">ข้อมูลที่เราเก็บ</span><span class="lang-en">Information We Collect</span></a></li>
+      <li><a href="#p2"><span class="lang-th">วิธีใช้ข้อมูล</span><span class="lang-en">How We Use Information</span></a></li>
+      <li><a href="#p3"><span class="lang-th">การแบ่งปันข้อมูล</span><span class="lang-en">Sharing</span></a></li>
+      <li><a href="#p4"><span class="lang-th">การเก็บและความปลอดภัย</span><span class="lang-en">Storage & Security</span></a></li>
+      <li><a href="#p5"><span class="lang-th">สิทธิของคุณ (PDPA)</span><span class="lang-en">Your Rights (PDPA / GDPR)</span></a></li>
+      <li><a href="#p6"><span class="lang-th">คุกกี้</span><span class="lang-en">Cookies</span></a></li>
+      <li><a href="#p7"><span class="lang-th">เด็กและเยาวชน</span><span class="lang-en">Children</span></a></li>
+      <li><a href="#p8"><span class="lang-th">การส่งข้อมูลข้ามประเทศ</span><span class="lang-en">International Transfers</span></a></li>
+      <li><a href="#p9"><span class="lang-th">การเปลี่ยนแปลงนโยบาย</span><span class="lang-en">Changes</span></a></li>
+      <li><a href="#p10"><span class="lang-th">ติดต่อเรา</span><span class="lang-en">Contact</span></a></li>
+    </ol>
+  </div>
+
+  <h2 id="p1"><span class="lang-th">1. ข้อมูลที่เราเก็บ</span><span class="lang-en">1. Information We Collect</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th><span class="lang-th">ประเภท</span><span class="lang-en">Type</span></th>
+        <th><span class="lang-th">รายการ</span><span class="lang-en">Items</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><span class="lang-th">บัญชี</span><span class="lang-en">Account</span></strong></td>
+        <td><span class="lang-th">ชื่อ, อีเมล, รูปโปรไฟล์, เบอร์โทร (ถ้ามี), ที่อยู่ (ถ้ามี)</span><span class="lang-en">Name, email, profile photo, phone (optional), address (optional)</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">เนื้อหา</span><span class="lang-en">Content</span></strong></td>
+        <td><span class="lang-th">รูปและข้อมูลปลา ประวัติสายพันธุ์ โพสต์ คอมเมนต์ ข้อความแชท</span><span class="lang-en">Fish photos and records, pedigree, posts, comments, chat messages</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">การใช้งาน</span><span class="lang-en">Usage</span></strong></td>
+        <td><span class="lang-th">วันเวลาเข้าใช้, อุปกรณ์, เบราว์เซอร์, IP address, หน้าที่เข้าชม</span><span class="lang-en">Login times, device, browser, IP address, pages viewed</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">ตำแหน่ง</span><span class="lang-en">Location</span></strong></td>
+        <td><span class="lang-th">ตำแหน่งโดยประมาณ (จาก IP) หรือแม่นยำ (เมื่อคุณอนุญาต)</span><span class="lang-en">Approximate (from IP) or precise (when you allow)</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">การชำระเงิน</span><span class="lang-en">Payment</span></strong></td>
+        <td><span class="lang-th">ผ่านผู้ให้บริการที่เป็นพันธมิตร เราไม่เก็บเลขบัตรเครดิตเต็ม</span><span class="lang-en">Processed via partner providers. We do not store full credit card numbers.</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="p2"><span class="lang-th">2. วิธีใช้ข้อมูล</span><span class="lang-en">2. How We Use Information</span></h2>
+  <ul>
+    <li><span class="lang-th">ให้บริการและพัฒนาฟีเจอร์ของแอป</span><span class="lang-en">Operate and improve the Service.</span></li>
+    <li><span class="lang-th">ยืนยันตัวตน ป้องกันการแอบอ้าง และตรวจสอบ record ปลา</span><span class="lang-en">Authenticate users, prevent impersonation, and verify fish records.</span></li>
+    <li><span class="lang-th">อำนวยความสะดวกในการซื้อขายผ่าน Marketplace</span><span class="lang-en">Facilitate Marketplace transactions.</span></li>
+    <li><span class="lang-th">สื่อสารเรื่องบัญชี การอัปเดต และข่าวสาร (ที่คุณ opt-in)</span><span class="lang-en">Send account, update, and (opt-in) marketing communications.</span></li>
+    <li><span class="lang-th">วิเคราะห์การใช้งานเพื่อปรับปรุง UX</span><span class="lang-en">Analyze usage to improve UX.</span></li>
+    <li><span class="lang-th">ปฏิบัติตามกฎหมายและป้องกันการทุจริต</span><span class="lang-en">Comply with law and prevent fraud.</span></li>
+  </ul>
+
+  <h2 id="p3"><span class="lang-th">3. การแบ่งปันข้อมูล</span><span class="lang-en">3. Sharing</span></h2>
+  <p><span class="lang-th"><strong>เราไม่ขายข้อมูลส่วนตัวของคุณ</strong> เราอาจแบ่งปันข้อมูลในกรณีต่อไปนี้:</span>
+  <span class="lang-en"><strong>We do not sell your personal data.</strong> We share data only in these cases:</span></p>
+  <ul>
+    <li><span class="lang-th"><strong>ผู้ให้บริการ</strong> — Cloud hosting, อีเมล, การชำระเงิน, การวิเคราะห์ — ภายใต้ข้อตกลงรักษาความลับ</span><span class="lang-en"><strong>Service providers</strong> — Cloud hosting, email, payments, analytics — under confidentiality agreements.</span></li>
+    <li><span class="lang-th"><strong>ผู้ซื้อ-ผู้ขาย</strong> — ข้อมูลที่จำเป็นต่อการทำธุรกรรม (ชื่อ, ที่อยู่จัดส่ง)</span><span class="lang-en"><strong>Buyers and sellers</strong> — information necessary for transactions (name, shipping address).</span></li>
+    <li><span class="lang-th"><strong>ตามกฎหมาย</strong> — เมื่อมีคำสั่งศาลหรือคำขอจากหน่วยงานที่มีอำนาจ</span><span class="lang-en"><strong>Legal</strong> — in response to court orders or lawful requests.</span></li>
+    <li><span class="lang-th"><strong>การควบรวม</strong> — กรณีที่มีการขายหรือควบรวมกิจการ</span><span class="lang-en"><strong>Business transfers</strong> — in case of merger, acquisition, or sale.</span></li>
+  </ul>
+
+  <h2 id="p4"><span class="lang-th">4. การเก็บและความปลอดภัย</span><span class="lang-en">4. Storage & Security</span></h2>
+  <p><span class="lang-th">ข้อมูลเก็บใน secure cloud มีการเข้ารหัส (encryption at rest + in transit) backup รายวัน เราใช้มาตรการตามมาตรฐานอุตสาหกรรม แต่ไม่มีระบบใดปลอดภัย 100% เก็บข้อมูลตราบที่บัญชีของคุณยังใช้งาน + ระยะเวลาที่กฎหมายกำหนด</span>
+  <span class="lang-en">Data is stored in a secure cloud with encryption at rest and in transit, plus daily backups. We use industry-standard measures, though no system is 100% secure. We retain data while your account is active and for any legally required period.</span></p>
+
+  <h2 id="p5"><span class="lang-th">5. สิทธิของคุณ (PDPA / GDPR)</span><span class="lang-en">5. Your Rights (PDPA / GDPR)</span></h2>
+  <p><span class="lang-th">คุณมีสิทธิ์:</span><span class="lang-en">You have the right to:</span></p>
+  <ul>
+    <li><span class="lang-th">เข้าถึงและขอสำเนาข้อมูลของคุณ</span><span class="lang-en">Access and request a copy of your data.</span></li>
+    <li><span class="lang-th">แก้ไขข้อมูลที่ไม่ถูกต้อง</span><span class="lang-en">Correct inaccurate information.</span></li>
+    <li><span class="lang-th">ลบข้อมูลของคุณ (ภายใต้ข้อยกเว้นที่กฎหมายกำหนด)</span><span class="lang-en">Delete your data (subject to legal exceptions).</span></li>
+    <li><span class="lang-th">ถอนความยินยอม</span><span class="lang-en">Withdraw consent.</span></li>
+    <li><span class="lang-th">คัดค้านการประมวลผล</span><span class="lang-en">Object to processing.</span></li>
+    <li><span class="lang-th">ขอย้ายข้อมูลในรูปแบบที่อ่านได้</span><span class="lang-en">Request portability in a readable format.</span></li>
+    <li><span class="lang-th">ร้องเรียนต่อสำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส.)</span><span class="lang-en">Lodge a complaint with the Personal Data Protection Committee (PDPC) of Thailand.</span></li>
+  </ul>
+  <p><span class="lang-th">ส่งคำขอที่ <a href="mailto:privacy@fishconnect.co">privacy@fishconnect.co</a> เราจะตอบภายใน 30 วัน</span>
+  <span class="lang-en">Send requests to <a href="mailto:privacy@fishconnect.co">privacy@fishconnect.co</a>. We respond within 30 days.</span></p>
+
+  <h2 id="p6"><span class="lang-th">6. คุกกี้</span><span class="lang-en">6. Cookies</span></h2>
+  <p><span class="lang-th">ดูรายละเอียดที่ <a href="cookies.html">นโยบายคุกกี้</a></span>
+  <span class="lang-en">See the <a href="cookies.html">Cookie Policy</a> for details.</span></p>
+
+  <h2 id="p7"><span class="lang-th">7. เด็กและเยาวชน</span><span class="lang-en">7. Children</span></h2>
+  <p><span class="lang-th">บริการของเราไม่ออกแบบสำหรับเด็กอายุต่ำกว่า 13 ปี อายุ 13–17 ปีต้องได้รับความยินยอมจากผู้ปกครอง หากเราพบว่าเก็บข้อมูลเด็กโดยไม่ตั้งใจ จะลบทันที</span>
+  <span class="lang-en">Our Service is not designed for children under 13. Users aged 13–17 require parental consent. If we discover we have unintentionally collected children's data, we will delete it.</span></p>
+
+  <h2 id="p8"><span class="lang-th">8. การส่งข้อมูลข้ามประเทศ</span><span class="lang-en">8. International Transfers</span></h2>
+  <p><span class="lang-th">เซิร์ฟเวอร์หลักอยู่ในประเทศไทยและสิงคโปร์ บางบริการอาจประมวลผลในประเทศอื่นภายใต้มาตรการคุ้มครองที่เหมาะสม</span>
+  <span class="lang-en">Our primary servers are in Thailand and Singapore. Some services may process data in other countries under appropriate safeguards.</span></p>
+
+  <h2 id="p9"><span class="lang-th">9. การเปลี่ยนแปลงนโยบาย</span><span class="lang-en">9. Changes</span></h2>
+  <p><span class="lang-th">เราอาจปรับปรุงนโยบายเป็นระยะ การเปลี่ยนแปลงสำคัญจะแจ้งทางอีเมลหรือผ่านแอป ก่อนมีผลบังคับใช้อย่างน้อย 14 วัน</span>
+  <span class="lang-en">We may update this policy. Material changes are communicated by email or in-app at least 14 days before they take effect.</span></p>
+
+  <h2 id="p10"><span class="lang-th">10. ติดต่อเรา</span><span class="lang-en">10. Contact</span></h2>
+  <p><span class="lang-th">เจ้าหน้าที่คุ้มครองข้อมูล (DPO):<br>บริษัท ฟิช คอนเนคท์ จำกัด<br>อีเมล: <a href="mailto:privacy@fishconnect.co">privacy@fishconnect.co</a><br>ทั่วไป: <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span>
+  <span class="lang-en">Data Protection Officer:<br>FishConnect Co., Ltd.<br>Email: <a href="mailto:privacy@fishconnect.co">privacy@fishconnect.co</a><br>General: <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span></p>
+</main>
+
+<footer>
+  <p>© 2026 FishConnect Co., Ltd. — Built in Thailand 🇹🇭</p>
+</footer>
+
+<script>
+const savedLang = localStorage.getItem('fc_lang') || 'th';
+setLang(savedLang);
+document.querySelectorAll('.lang-switch button').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+function setLang(lang) {
+  document.body.classList.remove('lang-th', 'lang-en');
+  document.body.classList.add('lang-' + lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-switch button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('fc_lang', lang);
+}
+</script>
+</body>
+</html>
