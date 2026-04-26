@@ -273,23 +273,26 @@ section { position: relative; }
 
 .feature-img {
   display: flex; justify-content: center; align-items: center;
-  position: relative; min-height: 580px;
+  position: relative;
 }
 .feature-img img.phone {
   position: relative; z-index: 2;
-  width: 100%; max-width: 380px; height: auto;
+  width: 100%; max-width: 420px; height: auto;
   filter: drop-shadow(0 30px 80px rgba(0,0,0,.55)) drop-shadow(0 0 80px rgba(79,122,255,.22));
 }
-.feature-img .fish-art {
-  position: absolute; z-index: 1;
-  width: 90%; height: 100%; object-fit: contain;
-  opacity: .65;
-  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, black 30%, transparent 80%);
-          mask-image: radial-gradient(ellipse 70% 70% at center, black 30%, transparent 80%);
-  mix-blend-mode: screen;
+
+/* Fish ambient at SECTION level — far from phone, very subtle */
+.feature .fish-bg {
+  position: absolute; pointer-events: none; z-index: 0;
+  width: 50%; max-width: 620px; height: auto;
+  opacity: .10;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
+          mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
 }
-.feature-img .fish-art.right { left: 20%; }
-.feature-img .fish-art.left { right: 20%; }
+.feature .fish-bg.tl { top: -8%; left: -12%; }
+.feature .fish-bg.tr { top: -8%; right: -12%; }
+.feature .fish-bg.bl { bottom: -8%; left: -12%; }
+.feature .fish-bg.br { bottom: -8%; right: -12%; }
 
 /* ============== GALLERY ============== */
 .gallery {
@@ -598,6 +601,7 @@ footer .social a:hover { background: var(--brand); }
 
 <!-- ============ FEATURE: PEDIGREE ============ -->
 <section class="feature" id="pedigree">
+  <img src="assets/fish/lineage-network.png" class="fish-bg tr" alt="">
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
@@ -630,7 +634,6 @@ footer .social a:hover { background: var(--brand); }
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="assets/fish/lineage-network.png" class="fish-art right" alt="">
         <img src="screenshots/02-pedigree-pair.png" class="phone" alt="Pedigree">
       </div>
     </div>
@@ -639,6 +642,7 @@ footer .social a:hover { background: var(--brand); }
 
 <!-- ============ FEATURE: MY FISH ============ -->
 <section class="feature alt reverse">
+  <img src="assets/fish/blue-bokeh.png" class="fish-bg bl" alt="">
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
@@ -659,7 +663,6 @@ footer .social a:hover { background: var(--brand); }
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="assets/fish/blue-bokeh.png" class="fish-art left" alt="">
         <img src="screenshots/06-my-fish.png" class="phone" alt="My Fish">
       </div>
     </div>
@@ -668,6 +671,7 @@ footer .social a:hover { background: var(--brand); }
 
 <!-- ============ FEATURE: MARKETPLACE ============ -->
 <section class="feature" id="marketplace">
+  <img src="assets/fish/red-bubbles.png" class="fish-bg tl" alt="">
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
@@ -688,7 +692,6 @@ footer .social a:hover { background: var(--brand); }
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="assets/fish/red-bubbles.png" class="fish-art right" alt="">
         <img src="screenshots/07-marketplace.png" class="phone" alt="Marketplace">
       </div>
     </div>
@@ -697,6 +700,7 @@ footer .social a:hover { background: var(--brand); }
 
 <!-- ============ FEATURE: COMMUNITY ============ -->
 <section class="feature alt reverse" id="community">
+  <img src="assets/fish/redwhite-bokeh.png" class="fish-bg br" alt="">
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
@@ -717,7 +721,6 @@ footer .social a:hover { background: var(--brand); }
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="assets/fish/redwhite-bokeh.png" class="fish-art left" alt="">
         <img src="screenshots/05-community.png" class="phone" alt="Community">
       </div>
     </div>
@@ -726,6 +729,7 @@ footer .social a:hover { background: var(--brand); }
 
 <!-- ============ FEATURE: MY PRODUCT ============ -->
 <section class="feature">
+  <img src="assets/fish/data-chart.png" class="fish-bg tr" alt="">
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
@@ -746,7 +750,6 @@ footer .social a:hover { background: var(--brand); }
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="assets/fish/data-chart.png" class="fish-art right" alt="">
         <img src="screenshots/08-my-product.png" class="phone" alt="My Product">
       </div>
     </div>
