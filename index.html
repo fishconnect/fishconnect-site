@@ -90,11 +90,12 @@ h1, h2, h3, h4 {
   line-height: 1.7; max-width: 640px;
 }
 
-/* ============== AMBIENT FISH BG (subtle, low opacity) ============== */
+/* ============== AMBIENT FISH BG ============== */
 .ambient {
   position: absolute; pointer-events: none; z-index: 0;
-  opacity: .14; filter: blur(.5px);
-  mix-blend-mode: screen;
+  opacity: .28;
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at center, black 25%, transparent 80%);
+          mask-image: radial-gradient(ellipse 60% 60% at center, black 25%, transparent 80%);
 }
 
 /* ============== NAV ============== */
@@ -203,8 +204,10 @@ section { position: relative; }
 @media (max-width: 920px) { .hero-actions { justify-content: center; } }
 .hero-img { animation: hero-float 8s ease-in-out infinite; }
 .hero-img img {
-  width: 100%; height: auto; max-width: 580px; margin: 0 auto;
-  filter: drop-shadow(0 0 100px rgba(79,122,255,.5));
+  width: 100%; height: auto; max-width: 600px; margin: 0 auto;
+  filter: drop-shadow(0 0 120px rgba(79,122,255,.55));
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, black 50%, transparent 88%);
+          mask-image: radial-gradient(ellipse 65% 65% at center, black 50%, transparent 88%);
 }
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
@@ -278,21 +281,21 @@ section { position: relative; }
 .feature-img img.phone {
   position: relative; z-index: 2;
   width: 100%; max-width: 420px; height: auto;
-  filter: drop-shadow(0 30px 80px rgba(0,0,0,.55)) drop-shadow(0 0 80px rgba(79,122,255,.22));
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.55)) drop-shadow(0 0 100px rgba(79,122,255,.28));
 }
 
-/* Fish ambient at SECTION level — far from phone, very subtle */
+/* Fish ambient at SECTION level — visible but doesn't compete with phone */
 .feature .fish-bg {
   position: absolute; pointer-events: none; z-index: 0;
-  width: 50%; max-width: 620px; height: auto;
-  opacity: .10;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
-          mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);
+  width: 60%; max-width: 720px; height: auto;
+  opacity: .35;
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at center, black 25%, transparent 75%);
+          mask-image: radial-gradient(ellipse 60% 60% at center, black 25%, transparent 75%);
 }
-.feature .fish-bg.tl { top: -8%; left: -12%; }
-.feature .fish-bg.tr { top: -8%; right: -12%; }
-.feature .fish-bg.bl { bottom: -8%; left: -12%; }
-.feature .fish-bg.br { bottom: -8%; right: -12%; }
+.feature .fish-bg.tl { top: -15%; left: -18%; }
+.feature .fish-bg.tr { top: -15%; right: -18%; }
+.feature .fish-bg.bl { bottom: -15%; left: -18%; }
+.feature .fish-bg.br { bottom: -15%; right: -18%; }
 
 /* ============== GALLERY ============== */
 .gallery {
