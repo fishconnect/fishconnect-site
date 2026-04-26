@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#061021">
+<title>Cookie Policy — FishConnect</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand: #1652F0;
+  --ink: #061021;
+  --text: #1F2A44;
+  --muted: #5C6982;
+  --line: #E2E7EF;
+  --surface-1: #ffffff;
+  --surface-2: #F7F8FB;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--surface-1); color: var(--text);
+  font-family: "IBM Plex Sans Thai", "Inter", -apple-system, system-ui, sans-serif;
+  font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--brand); }
+body.lang-th .lang-en { display: none !important; }
+body.lang-en .lang-th { display: none !important; }
+
+.nav {
+  position: sticky; top: 0; background: rgba(255,255,255,.85);
+  backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); z-index: 100;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 88px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo img { height: 70px; width: auto; }
+.lang-switch {
+  display: flex; padding: 4px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--line);
+}
+.lang-switch button {
+  padding: 6px 12px; border-radius: 999px; border: none; cursor: pointer;
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  font-family: "Inter", sans-serif; background: transparent;
+}
+.lang-switch button.active { background: var(--ink); color: #fff; }
+
+main { max-width: 800px; margin: 60px auto 100px; padding: 0 32px; }
+h1 {
+  color: var(--ink); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 800; letter-spacing: -.03em;
+  font-size: clamp(36px, 5vw, 52px); line-height: 1.1; margin-bottom: 16px;
+}
+h2 {
+  color: var(--ink); font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(22px, 2.4vw, 28px); margin: 40px 0 16px;
+}
+h3 {
+  color: var(--ink); font-weight: 600; font-size: 18px;
+  margin: 24px 0 8px;
+}
+p { color: var(--text); margin-bottom: 16px; }
+.eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--brand); margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+.updated { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+table {
+  width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+  font-size: 15px;
+}
+th, td {
+  padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  background: var(--surface-2); color: var(--ink); font-weight: 600;
+  font-size: 13px; letter-spacing: .04em; text-transform: uppercase;
+}
+ul { padding-left: 20px; margin-bottom: 16px; }
+ul li { margin-bottom: 8px; }
+.actions {
+  margin-top: 40px; padding: 24px; background: var(--surface-2);
+  border-radius: 12px; border: 1px solid var(--line);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px; border-radius: 999px;
+  font-size: 14.5px; font-weight: 600; cursor: pointer;
+  font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  border: none;
+}
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 8px; }
+.back { display: inline-block; color: var(--muted); margin-bottom: 24px; font-size: 14px; }
+.back:hover { color: var(--brand); }
+
+footer {
+  background: #030714; color: rgba(255,255,255,.55);
+  padding: 40px 0; font-size: 14px; text-align: center;
+}
+</style>
+</head>
+<body class="lang-th">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
+    <div class="lang-switch">
+      <button data-lang="th" class="active" type="button">TH</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <a href="index.html" class="back">← <span class="lang-th">กลับหน้าแรก</span><span class="lang-en">Back to Home</span></a>
+
+  <span class="eyebrow">Cookie Policy</span>
+
+  <h1>
+    <span class="lang-th">นโยบายการใช้คุกกี้</span>
+    <span class="lang-en">Cookie Policy</span>
+  </h1>
+  <p class="updated">
+    <span class="lang-th">อัปเดตล่าสุด: 27 เมษายน 2569</span>
+    <span class="lang-en">Last updated: 27 April 2026</span>
+  </p>
+
+  <p>
+    <span class="lang-th">นโยบายนี้อธิบายว่า FishConnect ("เรา") ใช้คุกกี้และเทคโนโลยีคล้ายกันบนเว็บไซต์ <a href="https://fishconnect.co">fishconnect.co</a> และแอปพลิเคชันมือถือของเราอย่างไร</span>
+    <span class="lang-en">This policy explains how FishConnect ("we", "us") uses cookies and similar technologies on <a href="https://fishconnect.co">fishconnect.co</a> and our mobile apps.</span>
+  </p>
+
+  <h2>
+    <span class="lang-th">1. คุกกี้คืออะไร</span>
+    <span class="lang-en">1. What are cookies</span>
+  </h2>
+  <p>
+    <span class="lang-th">คุกกี้คือไฟล์ข้อความขนาดเล็กที่เว็บไซต์เก็บไว้ในเบราว์เซอร์ของคุณ ใช้เพื่อจดจำการตั้งค่า ปรับประสบการณ์ใช้งาน และวิเคราะห์การใช้เว็บไซต์</span>
+    <span class="lang-en">Cookies are small text files stored in your browser. They help us remember your preferences, improve your experience, and analyze traffic.</span>
+  </p>
+
+  <h2>
+    <span class="lang-th">2. ประเภทของคุกกี้ที่เราใช้</span>
+    <span class="lang-en">2. Types of cookies we use</span>
+  </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th><span class="lang-th">ประเภท</span><span class="lang-en">Type</span></th>
+        <th><span class="lang-th">วัตถุประสงค์</span><span class="lang-en">Purpose</span></th>
+        <th><span class="lang-th">ระยะเวลา</span><span class="lang-en">Duration</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><span class="lang-th">จำเป็น</span><span class="lang-en">Essential</span></strong></td>
+        <td><span class="lang-th">ใช้เพื่อให้เว็บไซต์ทำงานพื้นฐาน เช่น การจดจำภาษา การยืนยันการยอมรับ cookie</span><span class="lang-en">Required for basic site functionality — language preference, cookie consent.</span></td>
+        <td><span class="lang-th">1 ปี</span><span class="lang-en">1 year</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">วิเคราะห์</span><span class="lang-en">Analytics</span></strong></td>
+        <td><span class="lang-th">เก็บข้อมูลแบบ anonymous เพื่อวัด traffic และปรับปรุงเว็บ (เช่น Google Analytics)</span><span class="lang-en">Anonymous analytics to measure traffic and improve the site (e.g., Google Analytics).</span></td>
+        <td><span class="lang-th">2 ปี</span><span class="lang-en">2 years</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">การใช้งาน</span><span class="lang-en">Functional</span></strong></td>
+        <td><span class="lang-th">จดจำการตั้งค่าผู้ใช้ เช่น ภาษา ธีม</span><span class="lang-en">Remember user preferences like language and theme.</span></td>
+        <td><span class="lang-th">1 ปี</span><span class="lang-en">1 year</span></td>
+      </tr>
+      <tr>
+        <td><strong><span class="lang-th">การตลาด</span><span class="lang-en">Marketing</span></strong></td>
+        <td><span class="lang-th">ใช้แสดงโฆษณาที่เกี่ยวข้องบนแพลตฟอร์มอื่น (เปิดเฉพาะเมื่อคุณยอมรับ)</span><span class="lang-en">Used to deliver relevant ads on other platforms (only with consent).</span></td>
+        <td><span class="lang-th">90 วัน</span><span class="lang-en">90 days</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>
+    <span class="lang-th">3. คุกกี้ของบุคคลที่สาม</span>
+    <span class="lang-en">3. Third-party cookies</span>
+  </h2>
+  <p>
+    <span class="lang-th">เราอาจใช้บริการจากบุคคลที่สามที่ตั้งคุกกี้บนเบราว์เซอร์ของคุณ เช่น:</span>
+    <span class="lang-en">We may use third-party services that set cookies, including:</span>
+  </p>
+  <ul>
+    <li><strong>Google Analytics</strong> — <span class="lang-th">วิเคราะห์การใช้งานเว็บ</span><span class="lang-en">Site analytics</span></li>
+    <li><strong>Meta (Facebook, Instagram)</strong> — <span class="lang-th">โฆษณาและการตลาด</span><span class="lang-en">Advertising and marketing</span></li>
+    <li><strong>Google Fonts</strong> — <span class="lang-th">ฟอนต์</span><span class="lang-en">Web fonts</span></li>
+  </ul>
+
+  <h2>
+    <span class="lang-th">4. คุณสามารถจัดการคุกกี้ได้อย่างไร</span>
+    <span class="lang-en">4. How to manage cookies</span>
+  </h2>
+  <p>
+    <span class="lang-th">คุณควบคุมคุกกี้ได้ 3 ทาง:</span>
+    <span class="lang-en">You have three ways to control cookies:</span>
+  </p>
+  <ul>
+    <li><span class="lang-th"><strong>แบนเนอร์ของเรา</strong> — กดยอมรับ/ปฏิเสธในแบนเนอร์ที่ปรากฏในการเข้าครั้งแรก</span><span class="lang-en"><strong>Our banner</strong> — accept or decline using the banner shown on first visit.</span></li>
+    <li><span class="lang-th"><strong>ตั้งค่าเบราว์เซอร์</strong> — Chrome, Safari, Firefox มี option ปิดคุกกี้ได้</span><span class="lang-en"><strong>Browser settings</strong> — Chrome, Safari, Firefox all allow blocking cookies.</span></li>
+    <li><span class="lang-th"><strong>รีเซ็ตที่นี่</strong> — กดปุ่มด้านล่างเพื่อล้างการตั้งค่าและแสดงแบนเนอร์อีกครั้ง</span><span class="lang-en"><strong>Reset here</strong> — click below to clear settings and reshow the banner.</span></li>
+  </ul>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="resetConsent()">
+      <span class="lang-th">รีเซ็ตการตั้งค่าคุกกี้</span>
+      <span class="lang-en">Reset cookie preferences</span>
+    </button>
+    <a href="index.html" class="btn btn-ghost">
+      <span class="lang-th">กลับหน้าแรก</span>
+      <span class="lang-en">Back to home</span>
+    </a>
+  </div>
+
+  <h2>
+    <span class="lang-th">5. การเปลี่ยนแปลงนโยบาย</span>
+    <span class="lang-en">5. Changes to this policy</span>
+  </h2>
+  <p>
+    <span class="lang-th">เราอาจปรับปรุงนโยบายนี้เป็นระยะ การเปลี่ยนแปลงสำคัญจะแจ้งผ่านเว็บไซต์หรืออีเมล</span>
+    <span class="lang-en">We may update this policy over time. Material changes will be communicated via the site or email.</span>
+  </p>
+
+  <h2>
+    <span class="lang-th">6. ติดต่อเรา</span>
+    <span class="lang-en">6. Contact</span>
+  </h2>
+  <p>
+    <span class="lang-th">มีคำถามเรื่อง cookie? ติดต่อ <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span>
+    <span class="lang-en">Questions about cookies? Email <a href="mailto:contact@fishconnect.co">contact@fishconnect.co</a></span>
+  </p>
+</main>
+
+<footer>
+  <p>© 2026 FishConnect Co., Ltd. — Built in Thailand 🇹🇭</p>
+</footer>
+
+<script>
+const savedLang = localStorage.getItem('fc_lang') || 'th';
+setLang(savedLang);
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+function setLang(lang) {
+  document.body.classList.remove('lang-th', 'lang-en');
+  document.body.classList.add('lang-' + lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  localStorage.setItem('fc_lang', lang);
+}
+function resetConsent() {
+  localStorage.removeItem('fc_cookie_consent');
+  localStorage.removeItem('fc_cookie_consent_date');
+  alert(document.body.classList.contains('lang-en')
+    ? 'Cookie preferences reset. The banner will appear next time you visit the homepage.'
+    : 'รีเซ็ตการตั้งค่าคุกกี้แล้ว แบนเนอร์จะแสดงอีกครั้งเมื่อกลับไปหน้าแรก');
+}
+</script>
+
+</body>
+</html>

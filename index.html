@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0a0e1a">
-<meta name="description" content="FishConnect — Digital Fish Hub บันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา ปลาทุกตัวมีประวัติ ตรวจสอบได้ ขายได้ราคา">
-<meta property="og:title" content="FishConnect — ปลาทุกตัวมีประวัติ ทุกตัวมีค่า">
-<meta property="og:description" content="Digital Fish Hub. Smart Pedigree. Smart Exchange.">
+<meta name="theme-color" content="#061021">
+<meta name="description" content="FishConnect — Digital Fish Hub. Record pedigree, sell on marketplace, connect with community. ปลาทุกตัวมีประวัติ ตรวจสอบได้ ขายได้ราคา">
+<meta property="og:title" content="FishConnect — Every fish has a story.">
+<meta property="og:description" content="Digital Fish Hub for breeders and collectors. Record pedigree, sell, connect.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://fishconnect.co/assets/logo.png">
-<title>FishConnect — ปลาทุกตัวมีประวัติ ทุกตัวมีค่า</title>
+<title>FishConnect — Every Fish Has a Story</title>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 
@@ -19,29 +19,37 @@
 
 <style>
 /* ============================================================
-   FishConnect — Corporate / Stripe-Linear inspired
-   Strictly: white · ink · single blue. No gradients on content.
+   FishConnect — Corporate Brand System
+   Single brand color · navy ink · subtle surfaces
    ============================================================ */
 :root {
-  --brand: #2D5BFF;
-  --brand-deep: #1841E8;
-  --ink: #0a0e1a;
-  --ink-2: #1a2640;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --line: #e6eaef;
-  --bg: #ffffff;
-  --bg-soft: #f7f8fb;
-  --bg-dark: #0a0e1a;
+  /* Brand — proprietary "FishConnect Blue" */
+  --brand: #1652F0;
+  --brand-deep: #0738C9;
+  --brand-tint: #EBF0FF;
+  --brand-glow: rgba(22, 82, 240, .12);
+
+  /* Neutrals — slight cool blue undertone for cohesion */
+  --ink: #061021;
+  --ink-2: #142242;
+  --text: #1F2A44;
+  --muted: #5C6982;
+  --line: #E2E7EF;
+  --surface-1: #ffffff;
+  --surface-2: #F7F8FB;
+  --surface-3: #EEF1F7;
+
+  /* System */
   --max-w: 1200px;
-  --shadow-1: 0 1px 2px rgba(10,14,26,.04), 0 8px 24px rgba(10,14,26,.06);
-  --shadow-2: 0 24px 80px -20px rgba(10,14,26,.18), 0 8px 24px rgba(10,14,26,.06);
+  --shadow-1: 0 1px 2px rgba(6,16,33,.04), 0 8px 24px rgba(6,16,33,.06);
+  --shadow-2: 0 24px 80px -20px rgba(6,16,33,.18), 0 8px 24px rgba(6,16,33,.06);
+  --shadow-brand: 0 24px 80px -20px rgba(22,82,240,.30), 0 8px 24px rgba(22,82,240,.12);
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  background: var(--bg); color: var(--text);
+  background: var(--surface-1); color: var(--text);
   font-family: "IBM Plex Sans Thai", "Inter", -apple-system, system-ui, sans-serif;
   font-size: 17px; line-height: 1.55;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
@@ -55,28 +63,21 @@ strong { color: var(--ink); font-weight: 600; }
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
 @media (max-width: 600px) { .container { padding: 0 20px; } }
 
+/* ============== LANGUAGE TOGGLE ============== */
+body.lang-th .lang-en { display: none !important; }
+body.lang-en .lang-th { display: none !important; }
+
 /* ============== TYPOGRAPHY ============== */
 h1, h2, h3, h4 {
   color: var(--ink); letter-spacing: -.025em;
   font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
   font-weight: 800; line-height: 1.05;
 }
-.t-mega {
-  font-size: clamp(56px, 11vw, 140px); font-weight: 900;
-  letter-spacing: -.05em; line-height: .92;
-}
-.t-huge {
-  font-size: clamp(40px, 7vw, 88px); font-weight: 800;
-  letter-spacing: -.04em; line-height: .98;
-}
-.t-big {
-  font-size: clamp(32px, 4.5vw, 56px); font-weight: 800;
-  letter-spacing: -.03em; line-height: 1.05;
-}
-.t-med {
-  font-size: clamp(20px, 2.4vw, 28px); font-weight: 700;
-  letter-spacing: -.02em; line-height: 1.25;
-}
+.t-mega { font-size: clamp(56px, 11vw, 140px); font-weight: 900; letter-spacing: -.05em; line-height: .92; }
+.t-huge { font-size: clamp(40px, 7vw, 88px); font-weight: 800; letter-spacing: -.04em; line-height: .98; }
+.t-big { font-size: clamp(32px, 4.5vw, 56px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.t-med { font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; letter-spacing: -.02em; line-height: 1.25; }
+
 .eyebrow {
   display: inline-block; font-size: 13px; font-weight: 600;
   letter-spacing: .12em; text-transform: uppercase;
@@ -94,29 +95,39 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,.78);
   backdrop-filter: saturate(180%) blur(24px);
   -webkit-backdrop-filter: saturate(180%) blur(24px);
-  border-bottom: 1px solid rgba(230,234,239,.6);
+  border-bottom: 1px solid rgba(226,231,239,.6);
 }
 .nav-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 32px;
-  height: 76px; display: flex; align-items: center; justify-content: space-between;
+  height: 88px; display: flex; align-items: center; justify-content: space-between;
 }
-.logo {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 700; font-size: 20px; color: var(--ink);
-  font-family: "Inter", sans-serif; letter-spacing: -.02em;
-}
-.logo img { height: 44px; width: auto; }
+.logo { display: flex; align-items: center; }
+.logo img { height: 70px; width: auto; }
 .nav-links { display: flex; gap: 6px; align-items: center; }
 .nav-links a {
   padding: 9px 16px; border-radius: 999px;
   font-size: 14.5px; font-weight: 500; color: var(--text);
   transition: background .2s, color .2s;
 }
-.nav-links a:hover { background: var(--bg-soft); color: var(--ink); }
-@media (max-width: 820px) {
+.nav-links a:hover { background: var(--surface-2); color: var(--ink); }
+
+.nav-actions { display: flex; gap: 8px; align-items: center; }
+.lang-switch {
+  display: flex; padding: 4px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--line);
+}
+.lang-switch button {
+  padding: 6px 12px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  font-family: "Inter", sans-serif;
+  transition: background .15s, color .15s;
+}
+.lang-switch button.active { background: var(--ink); color: #fff; }
+
+@media (max-width: 880px) {
   .nav-links { display: none; }
-  .nav-inner { padding: 0 20px; height: 68px; }
-  .logo img { height: 38px; }
+  .nav-inner { padding: 0 20px; height: 76px; }
+  .logo img { height: 56px; }
 }
 
 /* ============== BUTTONS ============== */
@@ -125,41 +136,39 @@ h1, h2, h3, h4 {
   padding: 13px 22px; border-radius: 999px;
   font-size: 15px; font-weight: 600; white-space: nowrap;
   font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
-  transition: transform .15s, background .2s;
+  transition: transform .15s, background .2s, box-shadow .2s;
 }
 .btn-primary { background: var(--ink); color: #fff; }
-.btn-primary:hover { background: var(--brand); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--brand); transform: translateY(-1px); box-shadow: var(--shadow-brand); }
 .btn-store {
   background: var(--ink); color: #fff;
   display: inline-flex; align-items: center; gap: 12px;
   padding: 14px 22px; border-radius: 14px;
-  transition: transform .15s, background .2s;
+  transition: transform .15s, background .2s, box-shadow .2s;
 }
-.btn-store:hover { background: var(--brand); transform: translateY(-2px); }
+.btn-store:hover { background: var(--brand); transform: translateY(-2px); box-shadow: var(--shadow-brand); }
 .btn-store .label { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.15; font-family: "Inter", sans-serif; }
 .btn-store .small { font-size: 11px; opacity: .85; font-weight: 400; }
 .btn-store .big { font-size: 16px; font-weight: 700; letter-spacing: 0; }
 
 /* ============== HERO ============== */
 .hero {
-  min-height: 92vh; padding: 120px 0 60px;
+  min-height: 92vh; padding: 140px 0 80px;
   display: flex; align-items: center;
   position: relative; overflow: hidden;
 }
 .hero::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(900px 600px at 100% 0%, rgba(45,91,255,.10), transparent 65%),
-    radial-gradient(700px 500px at 0% 100%, rgba(45,91,255,.04), transparent 60%);
+    radial-gradient(900px 600px at 100% 0%, rgba(22,82,240,.10), transparent 65%),
+    radial-gradient(700px 500px at 0% 100%, rgba(22,82,240,.04), transparent 60%);
 }
 .hero-inner {
   position: relative; width: 100%;
   display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px;
   align-items: center;
 }
-@media (max-width: 920px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
-}
+@media (max-width: 920px) { .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; } }
 .hero h1 { margin-bottom: 28px; }
 .hero h1 .blue { color: var(--brand); }
 .hero .lead { margin-bottom: 40px; }
@@ -167,13 +176,13 @@ h1, h2, h3, h4 {
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 @media (max-width: 920px) { .hero-actions { justify-content: center; } }
 .hero-img img {
-  width: 100%; height: auto; max-width: 100%;
-  filter: drop-shadow(0 60px 100px rgba(10,14,26,.18));
+  width: 100%; height: auto;
+  filter: drop-shadow(0 60px 100px rgba(6,16,33,.18));
 }
 
 /* ============== MARQUEE ============== */
 .marquee {
-  padding: 80px 0; background: var(--bg-soft);
+  padding: 80px 0; background: var(--surface-2);
   overflow: hidden;
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
@@ -184,24 +193,21 @@ h1, h2, h3, h4 {
 }
 .marquee-track img {
   height: 460px; width: auto;
-  filter: drop-shadow(0 24px 50px rgba(10,14,26,.14));
+  filter: drop-shadow(0 24px 50px rgba(6,16,33,.14));
 }
-@keyframes scroll-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
+@keyframes scroll-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @media (max-width: 760px) { .marquee-track img { height: 360px; } .marquee-track { gap: 24px; } }
 
 /* ============== STATEMENT ============== */
 .statement {
-  background: var(--bg-dark); color: #fff;
+  background: var(--ink); color: #fff;
   padding: clamp(120px, 16vw, 200px) 0;
   text-align: center; position: relative; overflow: hidden;
 }
 .statement::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(1000px 500px at 50% 50%, rgba(45,91,255,.18), transparent 60%);
+  background: radial-gradient(1000px 500px at 50% 50%, rgba(22,82,240,.18), transparent 60%);
 }
 .statement-inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 .statement h2 { color: #fff; margin-bottom: 28px; }
@@ -209,12 +215,9 @@ h1, h2, h3, h4 {
 .statement h2 .blue { color: var(--brand); }
 .statement p { color: rgba(255,255,255,.7); font-size: clamp(17px, 1.5vw, 22px); line-height: 1.65; max-width: 760px; margin: 0 auto; }
 
-/* ============== FEATURES (alternating sections) ============== */
-.feature {
-  padding: clamp(80px, 11vw, 140px) 0;
-  border-top: 1px solid var(--line);
-}
-.feature.alt { background: var(--bg-soft); }
+/* ============== FEATURES ============== */
+.feature { padding: clamp(80px, 11vw, 140px) 0; border-top: 1px solid var(--line); }
+.feature.alt { background: var(--surface-2); }
 .feature.no-border { border-top: 0; }
 .feature-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 96px);
@@ -229,12 +232,10 @@ h1, h2, h3, h4 {
 .feature-text h2 { margin-bottom: 20px; }
 .feature-text .lead { margin-bottom: 28px; }
 .feature-list { display: flex; flex-direction: column; gap: 16px; }
-.feature-list .item {
-  display: flex; align-items: flex-start; gap: 14px;
-}
+.feature-list .item { display: flex; align-items: flex-start; gap: 14px; }
 .feature-list .item::before {
   content: ""; flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
-  background: var(--brand); color: #fff;
+  background: var(--brand);
   margin-top: 4px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
   background-size: 14px; background-repeat: no-repeat; background-position: center;
@@ -242,20 +243,14 @@ h1, h2, h3, h4 {
 .feature-list .item strong { display: block; color: var(--ink); margin-bottom: 4px; font-weight: 600; }
 .feature-list .item span { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
 
-.feature-img {
-  display: flex; justify-content: center; align-items: center;
-}
+.feature-img { display: flex; justify-content: center; align-items: center; }
 .feature-img img {
-  width: 100%; max-width: 460px; height: auto;
-  filter: drop-shadow(0 40px 80px rgba(10,14,26,.16));
+  width: 100%; max-width: 480px; height: auto;
+  filter: drop-shadow(0 40px 80px rgba(6,16,33,.16));
 }
 
 /* ============== STATS ============== */
-.stats {
-  padding: clamp(100px, 13vw, 160px) 0;
-  text-align: center;
-  border-top: 1px solid var(--line);
-}
+.stats { padding: clamp(100px, 13vw, 160px) 0; text-align: center; border-top: 1px solid var(--line); }
 .stats-head { max-width: 720px; margin: 0 auto 64px; }
 .stats-head h2 { margin-bottom: 16px; }
 .stats-head .lead { margin: 0 auto; }
@@ -267,7 +262,7 @@ h1, h2, h3, h4 {
 .stat {
   padding: 32px 28px; border: 1px solid var(--line); border-radius: 16px;
   transition: border-color .2s, transform .2s, box-shadow .2s;
-  background: #fff;
+  background: var(--surface-1);
 }
 .stat:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: var(--shadow-2); }
 .stat .num {
@@ -279,14 +274,14 @@ h1, h2, h3, h4 {
 .stat .lbl { color: var(--muted); font-size: 14.5px; }
 
 /* ============== HOW IT WORKS ============== */
-.how { padding: clamp(100px, 13vw, 160px) 0; background: var(--bg-soft); }
+.how { padding: clamp(100px, 13vw, 160px) 0; background: var(--surface-2); }
 .how-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
 .how-head h2 { margin-bottom: 16px; }
 .how-head .lead { margin: 0 auto; }
 .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 @media (max-width: 760px) { .how-grid { grid-template-columns: 1fr; } }
 .how-step {
-  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  background: var(--surface-1); border: 1px solid var(--line); border-radius: 20px;
   padding: 36px; transition: border-color .25s, transform .25s, box-shadow .25s;
 }
 .how-step:hover { border-color: var(--brand); transform: translateY(-4px); box-shadow: var(--shadow-2); }
@@ -307,13 +302,13 @@ h1, h2, h3, h4 {
 .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 @media (max-width: 760px) { .aud-grid { grid-template-columns: 1fr; } }
 .aud-card {
-  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  background: var(--surface-1); border: 1px solid var(--line); border-radius: 20px;
   padding: 44px; transition: border-color .25s, transform .25s, box-shadow .25s;
 }
 .aud-card:hover { border-color: var(--brand); transform: translateY(-4px); box-shadow: var(--shadow-2); }
 .aud-card .lbl {
   display: inline-block; padding: 6px 14px; border-radius: 999px;
-  background: var(--bg-soft); color: var(--brand); font-size: 12px; font-weight: 700;
+  background: var(--brand-tint); color: var(--brand); font-size: 12px; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase; margin-bottom: 20px;
   font-family: "Inter", sans-serif;
 }
@@ -323,12 +318,12 @@ h1, h2, h3, h4 {
 .aud-card ul li::before { content: "→ "; color: var(--brand); font-weight: 700; }
 
 /* ============== FAQ ============== */
-.faq { padding: clamp(100px, 13vw, 160px) 0; background: var(--bg-soft); }
+.faq { padding: clamp(100px, 13vw, 160px) 0; background: var(--surface-2); }
 .faq-head { text-align: center; max-width: 720px; margin: 0 auto 60px; }
 .faq-head h2 { margin-bottom: 16px; }
 .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 .faq-item {
-  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  background: var(--surface-1); border: 1px solid var(--line); border-radius: 16px;
   overflow: hidden; transition: border-color .2s, box-shadow .2s;
 }
 .faq-item[open] { border-color: var(--brand); box-shadow: var(--shadow-1); }
@@ -340,7 +335,7 @@ h1, h2, h3, h4 {
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
   content: ""; flex-shrink: 0; width: 22px; height: 22px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'/><line x1='5' y1='12' x2='19' y2='12'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C6982' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'/><line x1='5' y1='12' x2='19' y2='12'/></svg>");
   background-size: contain; background-repeat: no-repeat;
   transition: transform .2s;
 }
@@ -351,11 +346,11 @@ h1, h2, h3, h4 {
 .cta {
   padding: clamp(120px, 16vw, 200px) 0;
   text-align: center; position: relative; overflow: hidden;
-  background: var(--bg-dark); color: #fff;
+  background: var(--ink); color: #fff;
 }
 .cta::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(900px 500px at 50% 50%, rgba(45,91,255,.22), transparent 60%);
+  background: radial-gradient(900px 500px at 50% 50%, rgba(22,82,240,.22), transparent 60%);
 }
 .cta-inner { position: relative; max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .cta h2 { color: #fff; margin-bottom: 24px; }
@@ -363,7 +358,7 @@ h1, h2, h3, h4 {
 .cta .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ============== FOOTER ============== */
-footer { background: #050810; color: rgba(255,255,255,.55); padding: 80px 0 32px; }
+footer { background: #030714; color: rgba(255,255,255,.55); padding: 80px 0 32px; }
 .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
 footer h4 {
@@ -372,7 +367,7 @@ footer h4 {
   font-family: "Inter", sans-serif; font-weight: 600;
 }
 footer .brand-block .logo { color: #fff; margin-bottom: 14px; }
-footer .brand-block .logo img { height: 44px; }
+footer .brand-block .logo img { height: 70px; }
 footer .brand-block p { font-size: 14px; max-width: 320px; margin-bottom: 20px; line-height: 1.6; }
 footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 footer ul a { font-size: 14px; transition: color .15s; color: rgba(255,255,255,.55); }
@@ -390,6 +385,31 @@ footer .social a:hover { background: var(--brand); }
   font-size: 13px;
 }
 
+/* ============== COOKIE BANNER ============== */
+.cookie-banner {
+  position: fixed; bottom: 24px; left: 24px; right: 24px;
+  max-width: 720px; margin: 0 auto;
+  background: var(--ink); color: #fff; border-radius: 16px;
+  padding: 20px 24px; z-index: 200;
+  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+  box-shadow: 0 24px 80px rgba(6,16,33,.4);
+  transform: translateY(120%); transition: transform .4s ease;
+}
+.cookie-banner.show { transform: translateY(0); }
+.cookie-banner .text { flex: 1; min-width: 240px; font-size: 14px; line-height: 1.55; color: rgba(255,255,255,.85); }
+.cookie-banner .text a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.cookie-banner .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cookie-banner button {
+  padding: 10px 18px; border-radius: 999px;
+  font-size: 14px; font-weight: 600;
+  font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
+  transition: background .15s, transform .1s;
+}
+.cookie-banner .accept { background: var(--brand); color: #fff; }
+.cookie-banner .accept:hover { background: var(--brand-deep); }
+.cookie-banner .decline { background: rgba(255,255,255,.1); color: #fff; }
+.cookie-banner .decline:hover { background: rgba(255,255,255,.18); }
+
 /* ============== REVEAL ============== */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
@@ -399,20 +419,28 @@ footer .social a:hover { background: var(--brand); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
-<body>
+<body class="lang-th">
 
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="#" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
     <div class="nav-links">
-      <a href="#pedigree">Pedigree</a>
-      <a href="#marketplace">Marketplace</a>
-      <a href="#community">Community</a>
-      <a href="#how">How it works</a>
+      <a href="#pedigree"><span class="lang-th">สายพันธุ์</span><span class="lang-en">Pedigree</span></a>
+      <a href="#marketplace"><span class="lang-th">ตลาด</span><span class="lang-en">Marketplace</span></a>
+      <a href="#community"><span class="lang-th">ชุมชน</span><span class="lang-en">Community</span></a>
+      <a href="#how"><span class="lang-th">วิธีใช้</span><span class="lang-en">How it works</span></a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="#download" class="btn btn-primary">Get the App</a>
+    <div class="nav-actions">
+      <div class="lang-switch" role="tablist">
+        <button data-lang="th" class="active" type="button">TH</button>
+        <button data-lang="en" type="button">EN</button>
+      </div>
+      <a href="#download" class="btn btn-primary">
+        <span class="lang-th">ดาวน์โหลด</span><span class="lang-en">Get the App</span>
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -422,8 +450,14 @@ footer .social a:hover { background: var(--brand); }
     <div class="hero-inner">
       <div>
         <span class="eyebrow reveal">Digital Fish Hub</span>
-        <h1 class="t-huge reveal reveal-1">ปลาทุกตัว<br><span class="blue">มีประวัติ</span><br>ทุกตัวมีค่า</h1>
-        <p class="lead reveal reveal-2">FishConnect — แอปบันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา ทุกตัวที่คุณเพาะหรือซื้อมา <strong>มีประวัติย้อนกลับได้</strong> ขายได้ราคาดี</p>
+        <h1 class="t-huge reveal reveal-1">
+          <span class="lang-th">ปลาทุกตัว<br><span class="blue">มีประวัติ</span><br>ทุกตัวมีค่า</span>
+          <span class="lang-en">Every fish<br>has a <span class="blue">story.</span><br>Every fish has value.</span>
+        </h1>
+        <p class="lead reveal reveal-2">
+          <span class="lang-th">FishConnect — แอปบันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา ทุกตัวที่คุณเพาะหรือซื้อมา <strong>มีประวัติย้อนกลับได้</strong> ขายได้ราคาดี</span>
+          <span class="lang-en">FishConnect is the digital hub for breeders and collectors. <strong>Record pedigree, sell on the marketplace, connect with the community</strong> — every fish carries a verified record.</span>
+        </p>
         <div class="hero-actions reveal reveal-3">
           <a href="#" class="btn-store" data-store="ios">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
@@ -463,9 +497,14 @@ footer .social a:hover { background: var(--brand); }
 <!-- ============ STATEMENT ============ -->
 <section class="statement">
   <div class="statement-inner">
-    <h2 class="t-huge reveal">ปลาราคาแพง<br><span class="strike">ไม่ใช่ปัญหา</span><br><span class="blue">"ของไม่ตรงปก"</span> คือ.</h2>
-    <p class="reveal reveal-2">ปลากัด 1 ตัวมูลค่าหลักหมื่น ปลาคาร์ปหลักแสน — แต่จะรู้ได้ยังไงว่าปลาที่ซื้อมาเป็นสายพันธุ์ตามที่อ้าง?
-      FishConnect แก้ปัญหานี้ด้วยการทำให้ทุกตัวมีประวัติ ตรวจสอบกลับไปยังผู้เพาะต้นทางได้</p>
+    <h2 class="t-huge reveal">
+      <span class="lang-th">ปลาราคาแพง<br><span class="strike">ไม่ใช่ปัญหา</span><br><span class="blue">"ของไม่ตรงปก"</span> คือ.</span>
+      <span class="lang-en">Expensive fish?<br><span class="strike">Not the problem.</span><br><span class="blue">Counterfeit ones</span> are.</span>
+    </h2>
+    <p class="reveal reveal-2">
+      <span class="lang-th">ปลากัด 1 ตัวมูลค่าหลักหมื่น ปลาคาร์ปหลักแสน — แต่จะรู้ได้ยังไงว่าปลาที่ซื้อมาเป็นสายพันธุ์ตามที่อ้าง? FishConnect แก้ปัญหานี้ด้วยการทำให้ทุกตัวมีประวัติ ตรวจสอบกลับไปยังผู้เพาะต้นทางได้</span>
+      <span class="lang-en">A single Betta can fetch thousands. A premium Koi, hundreds of thousands. But how do you verify the seller's claim? FishConnect solves this by giving every fish a record that traces back to the original breeder.</span>
+    </p>
   </div>
 </section>
 
@@ -475,17 +514,35 @@ footer .social a:hover { background: var(--brand); }
     <div class="feature-grid">
       <div class="feature-text reveal">
         <span class="eyebrow">Smart Pedigree</span>
-        <h2 class="t-big">สายพันธุ์ที่<br>ตรวจสอบกลับได้</h2>
-        <p class="lead">Family Tree แสดงพ่อ-แม่-ลูกในหน้าเดียว ผู้ซื้อสแกน QR เดียวเห็นประวัติย้อนหลังครบ</p>
+        <h2 class="t-big">
+          <span class="lang-th">สายพันธุ์ที่<br>ตรวจสอบได้</span>
+          <span class="lang-en">Pedigree you<br>can verify</span>
+        </h2>
+        <p class="lead">
+          <span class="lang-th">Family Tree แสดงพ่อ-แม่-ลูกในหน้าเดียว ผู้ซื้อสแกน QR เดียวเห็นประวัติย้อนหลังครบ</span>
+          <span class="lang-en">Family Tree shows Father, Mother, and Child on one screen. Buyers scan a QR to see the full history.</span>
+        </p>
         <div class="feature-list">
-          <div class="item"><div><strong>Family Tree ในหน้าเดียว</strong><span>เห็น Father, Mother, Child พร้อมรูปและสายพันธุ์</span></div></div>
-          <div class="item"><div><strong>QR Code เฉพาะตัว</strong><span>ปลาทุกตัวมี QR ของตัวเอง — สแกนตรวจสอบได้ทันที</span></div></div>
-          <div class="item"><div><strong>โอนสิทธิ์ได้</strong><span>เมื่อขาย record ของปลาตามไปยังเจ้าของใหม่</span></div></div>
-          <div class="item"><div><strong>เก็บประวัติครบ</strong><span>อายุ สุขภาพ รูปภาพ การให้อาหาร การเพาะ</span></div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">Family Tree ในหน้าเดียว</span><span class="lang-en">Family Tree at a glance</span></strong>
+            <span><span class="lang-th">เห็น Father, Mother, Child พร้อมรูปและสายพันธุ์</span><span class="lang-en">See Father, Mother, Child with photos and breed info</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">QR Code เฉพาะตัว</span><span class="lang-en">Unique QR per fish</span></strong>
+            <span><span class="lang-th">ปลาทุกตัวมี QR ของตัวเอง — สแกนตรวจสอบได้ทันที</span><span class="lang-en">Each fish has its own QR — scan to verify instantly</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">โอนสิทธิ์ได้</span><span class="lang-en">Transferable ownership</span></strong>
+            <span><span class="lang-th">เมื่อขาย record ของปลาตามไปยังเจ้าของใหม่</span><span class="lang-en">Sell a fish, and the record follows to the new owner</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">เก็บประวัติครบ</span><span class="lang-en">Complete history</span></strong>
+            <span><span class="lang-th">อายุ สุขภาพ รูปภาพ การให้อาหาร การเพาะ</span><span class="lang-en">Age, health, photos, feeding, breeding</span></span>
+          </div></div>
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
-        <img src="screenshots/02-pedigree-pair.png" alt="Smart Pedigree">
+        <img src="screenshots/02-pedigree-pair.png" alt="Pedigree">
       </div>
     </div>
   </div>
@@ -497,13 +554,31 @@ footer .social a:hover { background: var(--brand); }
     <div class="feature-grid">
       <div class="feature-text reveal">
         <span class="eyebrow">My Fish · Digital Assets</span>
-        <h2 class="t-big">ปลาของคุณ<br>คือสินทรัพย์ดิจิทัล</h2>
-        <p class="lead">จัดระเบียบปลาทุกตัวที่เลี้ยงในที่เดียว แยกตามสายพันธุ์ สถานะ และอายุ</p>
+        <h2 class="t-big">
+          <span class="lang-th">ปลาของคุณ<br>คือสินทรัพย์ดิจิทัล</span>
+          <span class="lang-en">Your fish are<br>digital assets</span>
+        </h2>
+        <p class="lead">
+          <span class="lang-th">จัดระเบียบปลาทุกตัวที่เลี้ยงในที่เดียว แยกตามสายพันธุ์ สถานะ และอายุ</span>
+          <span class="lang-en">Organize every fish you keep in one place — sorted by breed, status, and age.</span>
+        </p>
         <div class="feature-list">
-          <div class="item"><div><strong>กรองตามสถานะ</strong><span>Healthy, Sick, Breeding, Juvenile</span></div></div>
-          <div class="item"><div><strong>ค้นหา</strong><span>ด้วยชื่อ สายพันธุ์ อายุ</span></div></div>
-          <div class="item"><div><strong>เก็บประวัติ</strong><span>รูปภาพ สุขภาพ การให้อาหาร การเพาะ</span></div></div>
-          <div class="item"><div><strong>โอนได้</strong><span>ทุก record ติดกับเจ้าของ — โอนสิทธิ์ผ่านแอป</span></div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">กรองตามสถานะ</span><span class="lang-en">Filter by status</span></strong>
+            <span>Healthy · Sick · Breeding · Juvenile</span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">ค้นหาง่าย</span><span class="lang-en">Easy search</span></strong>
+            <span><span class="lang-th">ด้วยชื่อ สายพันธุ์ อายุ</span><span class="lang-en">By name, breed, or age</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">เก็บประวัติ</span><span class="lang-en">Record everything</span></strong>
+            <span><span class="lang-th">รูปภาพ สุขภาพ การให้อาหาร การเพาะ</span><span class="lang-en">Photos, health, feeding, breeding</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">โอนสิทธิ์ได้</span><span class="lang-en">Transferable</span></strong>
+            <span><span class="lang-th">ทุก record ติดกับเจ้าของ</span><span class="lang-en">Records always follow the owner</span></span>
+          </div></div>
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
@@ -519,13 +594,31 @@ footer .social a:hover { background: var(--brand); }
     <div class="feature-grid">
       <div class="feature-text reveal">
         <span class="eyebrow">Marketplace · Smart Exchange</span>
-        <h2 class="t-big">ตลาดของปลา<br>ที่มีประวัติ</h2>
-        <p class="lead">ขายปลาในชื่อจริง พร้อมประวัติสายพันธุ์ครบ — ลูกค้ามั่นใจ ผู้ขายได้ราคาที่ปลาควรจะได้</p>
+        <h2 class="t-big">
+          <span class="lang-th">ตลาดของปลา<br>ที่มีประวัติ</span>
+          <span class="lang-en">A marketplace<br>built on trust</span>
+        </h2>
+        <p class="lead">
+          <span class="lang-th">ขายปลาในชื่อจริง พร้อมประวัติสายพันธุ์ครบ — ลูกค้ามั่นใจ ผู้ขายได้ราคาที่ปลาควรจะได้</span>
+          <span class="lang-en">Sell fish under your real name with full pedigree. Buyers trust. Sellers get the price the fish deserves.</span>
+        </p>
         <div class="feature-list">
-          <div class="item"><div><strong>ลงขายปลา</strong><span>ติดราคา รูป ที่อยู่ พร้อมสถานะ Active/Draft/Sold</span></div></div>
-          <div class="item"><div><strong>ตะกร้า + Cart</strong><span>เหมือน e-commerce ปกติ</span></div></div>
-          <div class="item"><div><strong>QR ติดมาด้วย</strong><span>ปลาทุกตัวมีประวัติ ตรวจสอบได้</span></div></div>
-          <div class="item"><div><strong>ติดตาม + แชท</strong><span>view, Favorite, แชทระหว่างผู้ซื้อ-ผู้ขาย</span></div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">ลงขาย</span><span class="lang-en">List for sale</span></strong>
+            <span><span class="lang-th">ติดราคา รูป ที่อยู่ พร้อมสถานะ Active/Draft/Sold</span><span class="lang-en">Price, photos, location, plus Active/Draft/Sold status</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong>Cart</strong>
+            <span><span class="lang-th">ตะกร้าและ Add to Cart เหมือน e-commerce ปกติ</span><span class="lang-en">Standard cart + checkout flow</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">QR ติดมาด้วย</span><span class="lang-en">QR included</span></strong>
+            <span><span class="lang-th">ปลาทุกตัวมีประวัติ ตรวจสอบได้</span><span class="lang-en">Every listing comes with a verified history</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">ติดตาม + แชท</span><span class="lang-en">Track + chat</span></strong>
+            <span><span class="lang-th">view, Favorite, แชทระหว่างผู้ซื้อ-ผู้ขาย</span><span class="lang-en">Views, favorites, in-app messaging</span></span>
+          </div></div>
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
@@ -541,13 +634,31 @@ footer .social a:hover { background: var(--brand); }
     <div class="feature-grid">
       <div class="feature-text reveal">
         <span class="eyebrow">Community · Social Network</span>
-        <h2 class="t-big">เครือข่ายของ<br>คนรักปลาตัวจริง</h2>
-        <p class="lead">โพสต์เรื่องปลา แชร์ความรู้ ขายตรงในกลุ่ม — คอมมิวนิตี้ที่ทุกคนยืนยันเป็นเจ้าของปลาจริง</p>
+        <h2 class="t-big">
+          <span class="lang-th">เครือข่ายของ<br>คนรักปลาตัวจริง</span>
+          <span class="lang-en">A community<br>of real fish lovers</span>
+        </h2>
+        <p class="lead">
+          <span class="lang-th">โพสต์เรื่องปลา แชร์ความรู้ ขายตรงในกลุ่ม — ทุกคนยืนยันเป็นเจ้าของปลาจริง</span>
+          <span class="lang-en">Post about your fish, share knowledge, sell directly — every member is a verified fish owner.</span>
+        </p>
         <div class="feature-list">
-          <div class="item"><div><strong>โพสต์ + Hashtag</strong><span>รูป คำบรรยาย แท็ก</span></div></div>
-          <div class="item"><div><strong>Like / Comment / Share</strong><span>เหมือน social network</span></div></div>
-          <div class="item"><div><strong>กลุ่มย่อยตามสายพันธุ์</strong><span>ปลากัด ปลาคาร์ป ฯลฯ</span></div></div>
-          <div class="item"><div><strong>Trust Level</strong><span>ใช้งานนาน ยิ่ง trusted</span></div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">โพสต์ + Hashtag</span><span class="lang-en">Posts + hashtags</span></strong>
+            <span><span class="lang-th">รูป คำบรรยาย แท็ก</span><span class="lang-en">Photos, captions, tags</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong>Like · Comment · Share</strong>
+            <span><span class="lang-th">เหมือน social network ที่คุ้นเคย</span><span class="lang-en">Familiar social interactions</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">กลุ่มย่อยตามสายพันธุ์</span><span class="lang-en">Sub-groups by breed</span></strong>
+            <span><span class="lang-th">ปลากัด ปลาคาร์ป ฯลฯ</span><span class="lang-en">Betta, Koi, and more</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong>Trust Level</strong>
+            <span><span class="lang-th">ใช้งานนาน ยิ่ง trusted</span><span class="lang-en">The longer you contribute, the more trusted you become</span></span>
+          </div></div>
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
@@ -563,13 +674,31 @@ footer .social a:hover { background: var(--brand); }
     <div class="feature-grid">
       <div class="feature-text reveal">
         <span class="eyebrow">My Product · Digital Stock</span>
-        <h2 class="t-big">จัดการสินค้า<br>เป็นระเบียบ</h2>
-        <p class="lead">หน้าควบคุมสินค้าสำหรับผู้ขาย ดูสถานะ แก้ไข พิมพ์ QR สำหรับติดสินค้าได้ทันที</p>
+        <h2 class="t-big">
+          <span class="lang-th">จัดการสินค้า<br>เป็นระเบียบ</span>
+          <span class="lang-en">Inventory<br>made simple</span>
+        </h2>
+        <p class="lead">
+          <span class="lang-th">หน้าควบคุมสินค้าสำหรับผู้ขาย ดูสถานะ แก้ไข พิมพ์ QR สำหรับติดสินค้าได้ทันที</span>
+          <span class="lang-en">A control center for sellers — view status, edit, print QR codes on the spot.</span>
+        </p>
         <div class="feature-list">
-          <div class="item"><div><strong>กรองตามสถานะ</strong><span>Draft, Active, Sold Out, Paused</span></div></div>
-          <div class="item"><div><strong>ดู Engagement</strong><span>view count, Favorite count แต่ละสินค้า</span></div></div>
-          <div class="item"><div><strong>QR ในตัว</strong><span>แสดง / พิมพ์ติดสินค้าได้</span></div></div>
-          <div class="item"><div><strong>แก้ไขด่วน</strong><span>เปลี่ยนสถานะ ลบสินค้าได้ทันที</span></div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">กรองตามสถานะ</span><span class="lang-en">Filter by status</span></strong>
+            <span>Draft · Active · Sold Out · Paused</span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">Engagement metrics</span><span class="lang-en">Engagement metrics</span></strong>
+            <span><span class="lang-th">view count, Favorite count แต่ละสินค้า</span><span class="lang-en">View counts, favorites per listing</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">QR ในตัว</span><span class="lang-en">Built-in QR</span></strong>
+            <span><span class="lang-th">แสดง / พิมพ์ติดสินค้าได้</span><span class="lang-en">Display or print to attach to listings</span></span>
+          </div></div>
+          <div class="item"><div>
+            <strong><span class="lang-th">แก้ไขด่วน</span><span class="lang-en">Quick actions</span></strong>
+            <span><span class="lang-th">เปลี่ยนสถานะ ลบสินค้าได้ทันที</span><span class="lang-en">Change status or delete instantly</span></span>
+          </div></div>
         </div>
       </div>
       <div class="feature-img reveal reveal-1">
@@ -584,13 +713,16 @@ footer .social a:hover { background: var(--brand); }
   <div class="container">
     <div class="stats-head">
       <span class="eyebrow reveal">By the Numbers</span>
-      <h2 class="t-huge reveal reveal-1">ทำไมต้อง<br>FishConnect</h2>
+      <h2 class="t-huge reveal reveal-1">
+        <span class="lang-th">ทำไมต้อง<br>FishConnect</span>
+        <span class="lang-en">Why<br>FishConnect</span>
+      </h2>
     </div>
     <div class="stats-grid">
-      <div class="stat reveal"><div class="num"><span class="blue">100%</span></div><div class="lbl">ปลาทุกตัวมี QR ตรวจสอบได้</div></div>
-      <div class="stat reveal reveal-1"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600">นาที</span></div><div class="lbl">บันทึกปลาตัวแรก</div></div>
-      <div class="stat reveal reveal-2"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600">ภาษา</span></div><div class="lbl">ไทย / อังกฤษ ใช้งานได้</div></div>
-      <div class="stat reveal reveal-3"><div class="num"><span class="blue">฿0</span></div><div class="lbl">ค่าใช้จ่ายเริ่มต้น</div></div>
+      <div class="stat reveal"><div class="num"><span class="blue">100%</span></div><div class="lbl"><span class="lang-th">ปลาทุกตัวมี QR ตรวจสอบได้</span><span class="lang-en">Every fish has a verifiable QR</span></div></div>
+      <div class="stat reveal reveal-1"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600"><span class="lang-th">นาที</span><span class="lang-en">min</span></span></div><div class="lbl"><span class="lang-th">บันทึกปลาตัวแรก</span><span class="lang-en">To record your first fish</span></div></div>
+      <div class="stat reveal reveal-2"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600"><span class="lang-th">ภาษา</span><span class="lang-en">langs</span></span></div><div class="lbl"><span class="lang-th">ไทย / อังกฤษ ใช้งานได้</span><span class="lang-en">Thai / English supported</span></div></div>
+      <div class="stat reveal reveal-3"><div class="num"><span class="blue">฿0</span></div><div class="lbl"><span class="lang-th">ค่าใช้จ่ายเริ่มต้น</span><span class="lang-en">To get started</span></div></div>
     </div>
   </div>
 </section>
@@ -600,24 +732,39 @@ footer .social a:hover { background: var(--brand); }
   <div class="container">
     <div class="how-head">
       <span class="eyebrow reveal">How It Works</span>
-      <h2 class="t-huge reveal reveal-1">เริ่มใช้ใน 3 ขั้นตอน</h2>
-      <p class="lead reveal reveal-2">ไม่ต้องรู้เทคนิค — แค่มี smartphone</p>
+      <h2 class="t-huge reveal reveal-1">
+        <span class="lang-th">เริ่มใช้ใน 3 ขั้นตอน</span>
+        <span class="lang-en">Get started in 3 steps</span>
+      </h2>
+      <p class="lead reveal reveal-2">
+        <span class="lang-th">ไม่ต้องรู้เทคนิค — แค่มี smartphone</span>
+        <span class="lang-en">No technical skill required — just a smartphone</span>
+      </p>
     </div>
     <div class="how-grid">
       <div class="how-step reveal">
         <div class="num">STEP 1</div>
-        <h3 class="t-med">ดาวน์โหลด</h3>
-        <p>โหลด FishConnect ฟรีบน iOS หรือ Android — สมัครด้วย email หรือ Google ใน 30 วินาที</p>
+        <h3 class="t-med"><span class="lang-th">ดาวน์โหลด</span><span class="lang-en">Download</span></h3>
+        <p>
+          <span class="lang-th">โหลด FishConnect ฟรีบน iOS หรือ Android — สมัครด้วย email หรือ Google ใน 30 วินาที</span>
+          <span class="lang-en">Get FishConnect free on iOS or Android. Sign up with email or Google in 30 seconds.</span>
+        </p>
       </div>
       <div class="how-step reveal reveal-1">
         <div class="num">STEP 2</div>
-        <h3 class="t-med">บันทึก</h3>
-        <p>ถ่ายรูป + กรอกพ่อแม่ (ถ้ามี) — ระบบสร้าง record + QR ให้อัตโนมัติ</p>
+        <h3 class="t-med"><span class="lang-th">บันทึก</span><span class="lang-en">Record</span></h3>
+        <p>
+          <span class="lang-th">ถ่ายรูป + กรอกพ่อแม่ (ถ้ามี) — ระบบสร้าง record + QR ให้อัตโนมัติ</span>
+          <span class="lang-en">Snap a photo, add parents if known. The system generates a record + QR automatically.</span>
+        </p>
       </div>
       <div class="how-step reveal reveal-2">
         <div class="num">STEP 3</div>
-        <h3 class="t-med">ขาย / แลก</h3>
-        <p>ลง Marketplace หรือแชร์ใน Community — ลูกค้าสแกน QR ตรวจสอบประวัติได้</p>
+        <h3 class="t-med"><span class="lang-th">ขาย / แลก</span><span class="lang-en">Sell or trade</span></h3>
+        <p>
+          <span class="lang-th">ลง Marketplace หรือแชร์ใน Community — ลูกค้าสแกน QR ตรวจสอบประวัติได้</span>
+          <span class="lang-en">List on the Marketplace or share in the Community. Buyers scan QR to verify.</span>
+        </p>
       </div>
     </div>
   </div>
@@ -628,33 +775,39 @@ footer .social a:hover { background: var(--brand); }
   <div class="container">
     <div class="aud-head">
       <span class="eyebrow reveal">For Everyone</span>
-      <h2 class="t-huge reveal reveal-1">เหมาะกับใคร</h2>
-      <p class="lead reveal reveal-2">ไม่ว่าคุณจะเพาะปลา หรือซื้อปลา FishConnect ออกแบบมาเพื่อคุณ</p>
+      <h2 class="t-huge reveal reveal-1">
+        <span class="lang-th">เหมาะกับใคร</span>
+        <span class="lang-en">Built for everyone</span>
+      </h2>
+      <p class="lead reveal reveal-2">
+        <span class="lang-th">ไม่ว่าคุณจะเพาะปลา หรือซื้อปลา FishConnect ออกแบบมาเพื่อคุณ</span>
+        <span class="lang-en">Whether you breed fish or buy them, FishConnect is built for you.</span>
+      </p>
     </div>
     <div class="aud-grid">
       <div class="aud-card reveal">
         <span class="lbl">For Breeders</span>
-        <h3>สำหรับผู้เพาะ</h3>
-        <p>สร้างชื่อเสียง ขายปลาได้ราคา ประวัติทุกตัวไม่หาย</p>
+        <h3><span class="lang-th">สำหรับผู้เพาะ</span><span class="lang-en">For Breeders</span></h3>
+        <p><span class="lang-th">สร้างชื่อเสียง ขายปลาได้ราคา ประวัติทุกตัวไม่หาย</span><span class="lang-en">Build your reputation, sell at premium prices, never lose a record.</span></p>
         <ul>
-          <li>สร้าง portfolio สายพันธุ์ที่เป็น proof ของตัวเอง</li>
-          <li>ขายในนามจริง — ลูกค้าเห็นประวัติทุกตัว</li>
-          <li>ป้องกันคนแอบอ้างนำชื่อสายพันธุ์ไปใช้</li>
-          <li>เก็บ Level สะสม เป็น breeder ที่ trusted</li>
+          <li><span class="lang-th">สร้าง portfolio สายพันธุ์ที่เป็น proof ของตัวเอง</span><span class="lang-en">Build a portfolio that proves your work</span></li>
+          <li><span class="lang-th">ขายในนามจริง ลูกค้าเห็นประวัติทุกตัว</span><span class="lang-en">Sell under your real name with full history</span></li>
+          <li><span class="lang-th">ป้องกันคนแอบอ้างนำชื่อสายพันธุ์ไปใช้</span><span class="lang-en">Prevent others from impersonating your breed</span></li>
+          <li><span class="lang-th">เก็บ Level สะสม เป็น breeder ที่ trusted</span><span class="lang-en">Earn Levels and become a trusted breeder</span></li>
         </ul>
-        <a href="#download" class="btn btn-primary">เริ่มเพาะแบบมีประวัติ</a>
+        <a href="#download" class="btn btn-primary"><span class="lang-th">เริ่มเพาะแบบมีประวัติ</span><span class="lang-en">Start breeding with proof</span></a>
       </div>
       <div class="aud-card reveal reveal-1">
         <span class="lbl">For Buyers</span>
-        <h3>สำหรับผู้ซื้อ</h3>
-        <p>ซื้อปลาแบบ verify ได้ ไม่กลัวโดนหลอก</p>
+        <h3><span class="lang-th">สำหรับผู้ซื้อ</span><span class="lang-en">For Buyers</span></h3>
+        <p><span class="lang-th">ซื้อปลาแบบ verify ได้ ไม่กลัวโดนหลอก</span><span class="lang-en">Buy with confidence — every fish is verifiable.</span></p>
         <ul>
-          <li>ดูประวัติย้อนหลังทุกตัวก่อนซื้อ</li>
-          <li>สแกน QR หน้าฟาร์ม / ก่อนโอนเงิน</li>
-          <li>ปลาที่ซื้อมา record ตามไปด้วยตลอด</li>
-          <li>ขายต่อได้ราคาดีกว่า เพราะของมีประวัติ</li>
+          <li><span class="lang-th">ดูประวัติย้อนหลังทุกตัวก่อนซื้อ</span><span class="lang-en">Review the full history before buying</span></li>
+          <li><span class="lang-th">สแกน QR หน้าฟาร์ม / ก่อนโอนเงิน</span><span class="lang-en">Scan the QR at the farm or before paying</span></li>
+          <li><span class="lang-th">ปลาที่ซื้อมา record ตามไปด้วยตลอด</span><span class="lang-en">Records always follow the fish</span></li>
+          <li><span class="lang-th">ขายต่อได้ราคาดีกว่า เพราะของมีประวัติ</span><span class="lang-en">Resell at better prices — provenance pays</span></li>
         </ul>
-        <a href="#download" class="btn btn-primary">เริ่มซื้อแบบมั่นใจ</a>
+        <a href="#download" class="btn btn-primary"><span class="lang-th">เริ่มซื้อแบบมั่นใจ</span><span class="lang-en">Buy with confidence</span></a>
       </div>
     </div>
   </div>
@@ -665,15 +818,36 @@ footer .social a:hover { background: var(--brand); }
   <div class="container">
     <div class="faq-head">
       <span class="eyebrow reveal">FAQ</span>
-      <h2 class="t-huge reveal reveal-1">คำถามที่พบบ่อย</h2>
+      <h2 class="t-huge reveal reveal-1">
+        <span class="lang-th">คำถามที่พบบ่อย</span>
+        <span class="lang-en">Frequently asked questions</span>
+      </h2>
     </div>
     <div class="faq-list">
-      <details class="faq-item reveal"><summary>FishConnect ใช้ฟรีหรือเสียเงิน?</summary><div class="body">ใช้ฟรีในการบันทึกปลา สร้างประวัติ และเข้าคอมมิวนิตี้ Marketplace อาจมีค่าธรรมเนียมเล็กน้อยเมื่อขายสำเร็จ — ไม่มีค่าใช้จ่ายแอบแฝง</div></details>
-      <details class="faq-item reveal"><summary>ใช้กับปลาประเภทไหนได้บ้าง?</summary><div class="body">ใช้ได้กับปลาทุกชนิด ปลากัด ปลาคาร์ป ปลาทอง ปลาอะโรวานา ปลาสายพันธุ์เฉพาะ — ระบบยืดหยุ่นกับทุกประเภท</div></details>
-      <details class="faq-item reveal"><summary>ถ้าผมหยุดใช้ ข้อมูลปลาของลูกค้าจะหายไหม?</summary><div class="body">ไม่หาย ปลาทุกตัวที่ขายและโอนสิทธิ์ไปแล้ว ผู้ซื้อใหม่จะถือ record อยู่ในบัญชีของเขา ประวัติย้อนหลังไม่ขาดสาย แม้ผู้เพาะต้นทางจะหยุดใช้</div></details>
-      <details class="faq-item reveal"><summary>ตรวจสอบยังไงว่า record ที่บันทึกเป็นของจริง?</summary><div class="body">ใช้ระบบ verification หลายชั้น เจ้าของบัญชีต้องยืนยันตัวตน ทุก record มี timestamp + เจ้าของ การโอนสิทธิ์ต้องผ่านทั้งสองฝ่าย — ทำให้ปลอม record ได้ยาก</div></details>
-      <details class="faq-item reveal"><summary>รองรับภาษาอังกฤษไหม?</summary><div class="body">รองรับทั้งภาษาไทยและอังกฤษ สลับได้ในแอป เหมาะสำหรับนักเลี้ยง / ผู้ซื้อต่างชาติด้วย</div></details>
-      <details class="faq-item reveal"><summary>ข้อมูลปลอดภัยแค่ไหน?</summary><div class="body">ข้อมูลเก็บใน secure cloud มีการเข้ารหัส backup รายวัน ไม่แชร์ข้อมูลส่วนตัวกับบุคคลที่สาม</div></details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">FishConnect ใช้ฟรีหรือเสียเงิน?</span><span class="lang-en">Is FishConnect free?</span></summary>
+        <div class="body"><span class="lang-th">ใช้ฟรีในการบันทึกปลา สร้างประวัติ และเข้าคอมมิวนิตี้ Marketplace อาจมีค่าธรรมเนียมเล็กน้อยเมื่อขายสำเร็จ — ไม่มีค่าใช้จ่ายแอบแฝง</span><span class="lang-en">Recording fish, creating histories, and joining the community are free. The Marketplace may charge a small fee on successful sales. No hidden costs.</span></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">ใช้กับปลาประเภทไหนได้บ้าง?</span><span class="lang-en">What kinds of fish does it support?</span></summary>
+        <div class="body"><span class="lang-th">ใช้ได้กับปลาทุกชนิด ปลากัด ปลาคาร์ป ปลาทอง ปลาอะโรวานา ปลาสายพันธุ์เฉพาะ — ระบบยืดหยุ่นกับทุกประเภท</span><span class="lang-en">Every species — Betta, Koi, Goldfish, Arowana, specialty breeds. The system adapts to all types.</span></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">ถ้าผมหยุดใช้ ข้อมูลปลาของลูกค้าจะหายไหม?</span><span class="lang-en">If I stop using it, will customer data disappear?</span></summary>
+        <div class="body"><span class="lang-th">ไม่หาย ปลาทุกตัวที่ขายและโอนสิทธิ์ไปแล้ว ผู้ซื้อใหม่จะถือ record อยู่ในบัญชีของเขา ประวัติย้อนหลังไม่ขาดสาย แม้ผู้เพาะต้นทางจะหยุดใช้</span><span class="lang-en">No. Once a fish is sold and ownership is transferred, the record lives in the buyer's account. The history continues even if the original breeder leaves.</span></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">ตรวจสอบยังไงว่า record ที่บันทึกเป็นของจริง?</span><span class="lang-en">How do we know records are authentic?</span></summary>
+        <div class="body"><span class="lang-th">ใช้ระบบ verification หลายชั้น เจ้าของบัญชีต้องยืนยันตัวตน ทุก record มี timestamp + เจ้าของ การโอนสิทธิ์ต้องผ่านทั้งสองฝ่าย — ทำให้ปลอม record ได้ยาก</span><span class="lang-en">Multi-layer verification: account-holder ID checks, every record carries a timestamp and owner, and transfers require both parties to confirm. Forgery is hard.</span></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">รองรับภาษาอังกฤษไหม?</span><span class="lang-en">Does it support English?</span></summary>
+        <div class="body"><span class="lang-th">รองรับทั้งภาษาไทยและอังกฤษ สลับได้ในแอป เหมาะสำหรับนักเลี้ยง / ผู้ซื้อต่างชาติด้วย</span><span class="lang-en">Yes — Thai and English are both supported and can be switched in-app. Great for international keepers and buyers.</span></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="lang-th">ข้อมูลปลอดภัยแค่ไหน?</span><span class="lang-en">How secure is the data?</span></summary>
+        <div class="body"><span class="lang-th">ข้อมูลเก็บใน secure cloud มีการเข้ารหัส backup รายวัน ไม่แชร์ข้อมูลส่วนตัวกับบุคคลที่สาม</span><span class="lang-en">Stored in a secure cloud with encryption and daily backups. We never share personal data with third parties.</span></div>
+      </details>
     </div>
   </div>
 </section>
@@ -681,8 +855,8 @@ footer .social a:hover { background: var(--brand); }
 <!-- ============ CTA ============ -->
 <section class="cta" id="download">
   <div class="cta-inner">
-    <h2 class="t-mega reveal">เริ่มเลย.</h2>
-    <p class="reveal reveal-1">ดาวน์โหลดฟรี ใช้ได้ทันที — ไม่มีบัตรเครดิต ไม่มีพันธะ บันทึกปลาตัวแรกใน 2 นาที</p>
+    <h2 class="t-mega reveal"><span class="lang-th">เริ่มเลย.</span><span class="lang-en">Start now.</span></h2>
+    <p class="reveal reveal-1"><span class="lang-th">ดาวน์โหลดฟรี ใช้ได้ทันที — ไม่มีบัตรเครดิต ไม่มีพันธะ บันทึกปลาตัวแรกใน 2 นาที</span><span class="lang-en">Free to download. No credit card. No commitments. Record your first fish in 2 minutes.</span></p>
     <div class="actions reveal reveal-2">
       <a href="#" class="btn-store" data-store="ios">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
@@ -702,7 +876,7 @@ footer .social a:hover { background: var(--brand); }
     <div class="foot-grid">
       <div class="brand-block">
         <a href="#" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
-        <p>Digital Fish Hub — บันทึก ซื้อขาย เชื่อมต่อ ในแอปเดียว</p>
+        <p><span class="lang-th">Digital Fish Hub — บันทึก ซื้อขาย เชื่อมต่อ ในแอปเดียว</span><span class="lang-en">Digital Fish Hub — record, trade, connect in one app.</span></p>
         <div class="social">
           <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7c4.7-.7 8.4-4.8 8.4-9.9z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.5c-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3-2.4-5.3-5.3-5.3zm0 8.7c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4zm5.4-10c-.7 0-1.2.5-1.2 1.2s.5 1.2 1.2 1.2 1.2-.5 1.2-1.2-.5-1.2-1.2-1.2z"/></svg></a>
@@ -715,39 +889,53 @@ footer .social a:hover { background: var(--brand); }
           <li><a href="#pedigree">Pedigree</a></li>
           <li><a href="#marketplace">Marketplace</a></li>
           <li><a href="#community">Community</a></li>
-          <li><a href="#download">ดาวน์โหลด</a></li>
+          <li><a href="#download"><span class="lang-th">ดาวน์โหลด</span><span class="lang-en">Download</span></a></li>
         </ul>
       </div>
       <div>
         <h4>Company</h4>
         <ul>
-          <li><a href="#">เกี่ยวกับเรา</a></li>
-          <li><a href="#">นักลงทุน</a></li>
-          <li><a href="mailto:contact@fishconnect.co">ติดต่อ</a></li>
+          <li><a href="#"><span class="lang-th">เกี่ยวกับเรา</span><span class="lang-en">About</span></a></li>
+          <li><a href="#"><span class="lang-th">นักลงทุน</span><span class="lang-en">Investors</span></a></li>
+          <li><a href="mailto:contact@fishconnect.co"><span class="lang-th">ติดต่อ</span><span class="lang-en">Contact</span></a></li>
         </ul>
       </div>
       <div>
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Cookies</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 FishConnect. All rights reserved.</span>
+      <span>© 2026 FishConnect Co., Ltd. All rights reserved.</span>
       <span>Built in Thailand 🇹🇭</span>
     </div>
   </div>
 </footer>
 
+<!-- ============ COOKIE BANNER ============ -->
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent">
+  <div class="text">
+    <span class="lang-th">เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์การใช้งาน วิเคราะห์ข้อมูลและแสดงเนื้อหาที่เหมาะสม โดยการใช้เว็บไซต์ของเรา คุณยอมรับ <a href="cookies.html">Cookie Policy</a></span>
+    <span class="lang-en">We use cookies to enhance your experience, analyze traffic, and serve relevant content. By using our site, you accept our <a href="cookies.html">Cookie Policy</a>.</span>
+  </div>
+  <div class="actions">
+    <button class="decline" type="button" onclick="setCookieConsent('decline')"><span class="lang-th">ปฏิเสธ</span><span class="lang-en">Decline</span></button>
+    <button class="accept" type="button" onclick="setCookieConsent('accept')"><span class="lang-th">ยอมรับทั้งหมด</span><span class="lang-en">Accept all</span></button>
+  </div>
+</div>
+
 <script>
+// Reveal on scroll
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// App store links
 const STORE_LINKS = {
   ios: 'https://apps.apple.com/th/app/fishconnect-fish-pedigree/id6757432789',
   android: 'https://play.google.com/store/apps/details?id=com.fishconnect.app'
@@ -756,6 +944,33 @@ document.querySelectorAll('[data-store]').forEach(el => {
   const k = el.getAttribute('data-store');
   if (STORE_LINKS[k]) el.href = STORE_LINKS[k];
 });
+
+// Language switcher
+const savedLang = localStorage.getItem('fc_lang') || 'th';
+setLang(savedLang);
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+function setLang(lang) {
+  document.body.classList.remove('lang-th', 'lang-en');
+  document.body.classList.add('lang-' + lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  localStorage.setItem('fc_lang', lang);
+}
+
+// Cookie banner
+const banner = document.getElementById('cookieBanner');
+if (!localStorage.getItem('fc_cookie_consent')) {
+  setTimeout(() => banner.classList.add('show'), 800);
+}
+function setCookieConsent(value) {
+  localStorage.setItem('fc_cookie_consent', value);
+  localStorage.setItem('fc_cookie_consent_date', new Date().toISOString());
+  banner.classList.remove('show');
+}
 </script>
 
 </body>
