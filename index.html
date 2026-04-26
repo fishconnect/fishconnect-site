@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#0a0e1a">
 <meta name="description" content="FishConnect — Digital Fish Hub บันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา ปลาทุกตัวมีประวัติ ตรวจสอบได้ ขายได้ราคา">
 <meta property="og:title" content="FishConnect — ปลาทุกตัวมีประวัติ ทุกตัวมีค่า">
-<meta property="og:description" content="Digital Fish Hub. Smart Pedigree. Smart Exchange. ปลาทุกตัวมีประวัติ ตรวจสอบได้ ขายได้ราคา">
+<meta property="og:description" content="Digital Fish Hub. Smart Pedigree. Smart Exchange.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://fishconnect.co/assets/logo.png">
-<meta name="twitter:card" content="summary_large_image">
 <title>FishConnect — ปลาทุกตัวมีประวัติ ทุกตัวมีค่า</title>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
@@ -20,22 +19,23 @@
 
 <style>
 /* ============================================================
-   FishConnect — Wow Edition
+   FishConnect — Corporate / Stripe-Linear inspired
+   Strictly: white · ink · single blue. No gradients on content.
    ============================================================ */
 :root {
   --brand: #2D5BFF;
-  --brand-light: #5a78ff;
   --brand-deep: #1841E8;
-  --brand-soft: #EEF2FF;
   --ink: #0a0e1a;
   --ink-2: #1a2640;
-  --text: #1a2942;
-  --muted: #6b7c93;
+  --text: #1f2937;
+  --muted: #6b7280;
   --line: #e6eaef;
   --bg: #ffffff;
   --bg-soft: #f7f8fb;
   --bg-dark: #0a0e1a;
-  --max-w: 1280px;
+  --max-w: 1200px;
+  --shadow-1: 0 1px 2px rgba(10,14,26,.04), 0 8px 24px rgba(10,14,26,.06);
+  --shadow-2: 0 24px 80px -20px rgba(10,14,26,.18), 0 8px 24px rgba(10,14,26,.06);
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
@@ -50,6 +50,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
+strong { color: var(--ink); font-weight: 600; }
 
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
 @media (max-width: 600px) { .container { padding: 0 20px; } }
@@ -58,70 +59,73 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 h1, h2, h3, h4 {
   color: var(--ink); letter-spacing: -.025em;
   font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
-  font-weight: 800; line-height: 1;
+  font-weight: 800; line-height: 1.05;
 }
-.mega {
-  font-size: clamp(56px, 14vw, 200px); font-weight: 900;
-  letter-spacing: -.05em; line-height: .9;
+.t-mega {
+  font-size: clamp(56px, 11vw, 140px); font-weight: 900;
+  letter-spacing: -.05em; line-height: .92;
 }
-.huge {
-  font-size: clamp(40px, 8vw, 96px); font-weight: 800;
+.t-huge {
+  font-size: clamp(40px, 7vw, 88px); font-weight: 800;
   letter-spacing: -.04em; line-height: .98;
 }
-.big {
-  font-size: clamp(32px, 5vw, 64px); font-weight: 800;
+.t-big {
+  font-size: clamp(32px, 4.5vw, 56px); font-weight: 800;
   letter-spacing: -.03em; line-height: 1.05;
 }
-.med {
-  font-size: clamp(22px, 2.6vw, 32px); font-weight: 700;
-  letter-spacing: -.02em; line-height: 1.2;
+.t-med {
+  font-size: clamp(20px, 2.4vw, 28px); font-weight: 700;
+  letter-spacing: -.02em; line-height: 1.25;
 }
 .eyebrow {
-  display: inline-block; padding: 6px 12px; border-radius: 999px;
-  background: var(--brand-soft); color: var(--brand);
-  font-size: 12px; font-weight: 600; letter-spacing: .08em;
-  text-transform: uppercase; font-family: "Inter", sans-serif;
-  margin-bottom: 24px;
+  display: inline-block; font-size: 13px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--brand); margin-bottom: 24px;
+  font-family: "Inter", sans-serif;
 }
 .lead {
-  font-size: clamp(17px, 1.4vw, 21px); color: var(--muted);
-  line-height: 1.55; max-width: 620px;
+  font-size: clamp(17px, 1.4vw, 20px); color: var(--muted);
+  line-height: 1.6; max-width: 640px;
 }
 
 /* ============== NAV ============== */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.78);
   backdrop-filter: saturate(180%) blur(24px);
   -webkit-backdrop-filter: saturate(180%) blur(24px);
-  border-bottom: 1px solid rgba(230,234,239,.5);
+  border-bottom: 1px solid rgba(230,234,239,.6);
 }
 .nav-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 32px;
-  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  height: 76px; display: flex; align-items: center; justify-content: space-between;
 }
 .logo {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 700; font-size: 17px; color: var(--ink);
-  font-family: "Inter", sans-serif; letter-spacing: -.01em;
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 20px; color: var(--ink);
+  font-family: "Inter", sans-serif; letter-spacing: -.02em;
 }
-.logo img { height: 32px; width: auto; }
-.nav-links { display: flex; gap: 4px; align-items: center; }
+.logo img { height: 44px; width: auto; }
+.nav-links { display: flex; gap: 6px; align-items: center; }
 .nav-links a {
-  padding: 8px 14px; border-radius: 999px;
-  font-size: 14px; font-weight: 500; color: var(--text);
+  padding: 9px 16px; border-radius: 999px;
+  font-size: 14.5px; font-weight: 500; color: var(--text);
   transition: background .2s, color .2s;
 }
-.nav-links a:hover { background: var(--bg-soft); color: var(--brand); }
-@media (max-width: 820px) { .nav-links { display: none; } }
+.nav-links a:hover { background: var(--bg-soft); color: var(--ink); }
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .nav-inner { padding: 0 20px; height: 68px; }
+  .logo img { height: 38px; }
+}
 
 /* ============== BUTTONS ============== */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 12px 20px; border-radius: 999px;
-  font-size: 14.5px; font-weight: 600; white-space: nowrap;
+  padding: 13px 22px; border-radius: 999px;
+  font-size: 15px; font-weight: 600; white-space: nowrap;
   font-family: "Inter", "IBM Plex Sans Thai", sans-serif;
-  transition: transform .15s, box-shadow .2s, background .2s;
+  transition: transform .15s, background .2s;
 }
 .btn-primary { background: var(--ink); color: #fff; }
 .btn-primary:hover { background: var(--brand); transform: translateY(-1px); }
@@ -138,93 +142,58 @@ h1, h2, h3, h4 {
 
 /* ============== HERO ============== */
 .hero {
-  min-height: 100vh; padding: 96px 0 60px;
+  min-height: 92vh; padding: 120px 0 60px;
   display: flex; align-items: center;
   position: relative; overflow: hidden;
 }
 .hero::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(900px 600px at 100% 0%, rgba(45,91,255,.15), transparent 60%),
-    radial-gradient(700px 500px at 0% 80%, rgba(45,91,255,.06), transparent 50%);
+    radial-gradient(900px 600px at 100% 0%, rgba(45,91,255,.10), transparent 65%),
+    radial-gradient(700px 500px at 0% 100%, rgba(45,91,255,.04), transparent 60%);
 }
 .hero-inner {
   position: relative; width: 100%;
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px;
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px;
   align-items: center;
 }
 @media (max-width: 920px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
 }
 .hero h1 { margin-bottom: 28px; }
-.hero h1 .blue {
-  background: linear-gradient(120deg, var(--brand) 0%, var(--brand-light) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.hero .lead { margin-bottom: 36px; }
+.hero h1 .blue { color: var(--brand); }
+.hero .lead { margin-bottom: 40px; }
 @media (max-width: 920px) { .hero .lead { margin-left: auto; margin-right: auto; } }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 @media (max-width: 920px) { .hero-actions { justify-content: center; } }
-.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
-@media (max-width: 920px) { .hero-meta { justify-content: center; } }
-.hero-meta strong { color: var(--ink); font-weight: 700; }
-
-.hero-img {
-  position: relative;
-  animation: float 6s ease-in-out infinite;
-}
 .hero-img img {
-  width: 100%; height: auto;
-  filter: drop-shadow(0 50px 100px rgba(10,14,26,.25)) drop-shadow(0 16px 30px rgba(45,91,255,.15));
+  width: 100%; height: auto; max-width: 100%;
+  filter: drop-shadow(0 60px 100px rgba(10,14,26,.18));
 }
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-/* Scroll indicator */
-.scroll-down {
-  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-  width: 24px; height: 38px; border: 2px solid var(--muted); border-radius: 999px;
-  display: grid; place-items: center;
-  opacity: .6;
-}
-.scroll-down::after {
-  content: ""; width: 4px; height: 8px; background: var(--muted); border-radius: 2px;
-  animation: scrollDot 1.6s ease-in-out infinite;
-}
-@keyframes scrollDot {
-  0% { transform: translateY(-6px); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(6px); opacity: 0; }
-}
-@media (max-width: 920px) { .scroll-down { display: none; } }
 
 /* ============== MARQUEE ============== */
 .marquee {
-  padding: 60px 0;
-  background: var(--bg-soft);
+  padding: 80px 0; background: var(--bg-soft);
   overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .marquee-track {
-  display: flex; gap: 32px;
-  animation: scroll-marquee 40s linear infinite;
+  display: flex; gap: 40px;
+  animation: scroll-marquee 50s linear infinite;
   width: fit-content;
 }
 .marquee-track img {
-  height: 480px; width: auto;
-  filter: drop-shadow(0 20px 40px rgba(10,14,26,.12));
+  height: 460px; width: auto;
+  filter: drop-shadow(0 24px 50px rgba(10,14,26,.14));
 }
 @keyframes scroll-marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-@media (max-width: 760px) { .marquee-track img { height: 360px; } }
+@media (max-width: 760px) { .marquee-track img { height: 360px; } .marquee-track { gap: 24px; } }
 
-/* ============== STATEMENT (full-bleed dark) ============== */
+/* ============== STATEMENT ============== */
 .statement {
   background: var(--bg-dark); color: #fff;
   padding: clamp(120px, 16vw, 200px) 0;
@@ -232,195 +201,169 @@ h1, h2, h3, h4 {
 }
 .statement::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(1000px 500px at 50% 50%, rgba(45,91,255,.18), transparent 60%);
+  background: radial-gradient(1000px 500px at 50% 50%, rgba(45,91,255,.18), transparent 60%);
 }
 .statement-inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-.statement h2 { color: #fff; margin-bottom: 32px; }
+.statement h2 { color: #fff; margin-bottom: 28px; }
 .statement h2 .strike { text-decoration: line-through; opacity: .3; font-weight: 500; }
-.statement h2 .blue { color: var(--brand-light); }
-.statement p { color: rgba(255,255,255,.7); font-size: clamp(17px, 1.5vw, 22px); line-height: 1.6; max-width: 720px; margin: 0 auto; }
+.statement h2 .blue { color: var(--brand); }
+.statement p { color: rgba(255,255,255,.7); font-size: clamp(17px, 1.5vw, 22px); line-height: 1.65; max-width: 760px; margin: 0 auto; }
 
-/* ============== BENTO GRID ============== */
-.bento {
-  padding: clamp(80px, 12vw, 160px) 0;
+/* ============== FEATURES (alternating sections) ============== */
+.feature {
+  padding: clamp(80px, 11vw, 140px) 0;
+  border-top: 1px solid var(--line);
 }
-.bento-head { text-align: center; margin-bottom: clamp(40px, 6vw, 80px); }
-.bento-head h2 { margin-bottom: 16px; }
-.bento-head .lead { margin: 0 auto; }
-.bento-grid {
-  display: grid; grid-template-columns: repeat(6, 1fr);
-  gap: 16px; grid-auto-rows: minmax(280px, auto);
+.feature.alt { background: var(--bg-soft); }
+.feature.no-border { border-top: 0; }
+.feature-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 96px);
+  align-items: center;
 }
-.bento-cell {
-  background: #fff; border: 1px solid var(--line); border-radius: 24px;
-  overflow: hidden; position: relative;
-  transition: border-color .25s, transform .25s, box-shadow .25s;
-  display: flex; flex-direction: column;
-}
-.bento-cell:hover {
-  border-color: var(--brand); transform: translateY(-4px);
-  box-shadow: 0 24px 60px -20px rgba(45,91,255,.25);
-}
-.bento-cell.dark { background: var(--bg-dark); border-color: transparent; color: #fff; }
-.bento-cell.dark h3 { color: #fff; }
-.bento-cell.dark p { color: rgba(255,255,255,.7); }
-.bento-cell.brand {
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
-  border-color: transparent; color: #fff;
-}
-.bento-cell.brand h3 { color: #fff; }
-.bento-cell.brand p { color: rgba(255,255,255,.85); }
-.bento-cell .pad { padding: 32px; }
-.bento-cell h3 { font-size: clamp(20px, 2vw, 26px); margin-bottom: 10px; line-height: 1.2; }
-.bento-cell p { color: var(--muted); font-size: 15px; line-height: 1.55; }
-.bento-cell .img-wrap { flex: 1; display: flex; justify-content: center; align-items: flex-end; overflow: hidden; padding: 0 24px; min-height: 180px; }
-.bento-cell .img-wrap img { width: 100%; max-height: 320px; object-fit: contain; object-position: bottom; }
-
-/* Bento layout — desktop: 6 col grid */
-.bento-2x2 { grid-column: span 4; grid-row: span 2; }
-.bento-2x1 { grid-column: span 4; grid-row: span 1; }
-.bento-1x2 { grid-column: span 2; grid-row: span 2; }
-.bento-1x1 { grid-column: span 2; grid-row: span 1; }
-
+.feature.reverse .feature-grid { direction: rtl; }
+.feature.reverse .feature-grid > * { direction: ltr; }
 @media (max-width: 920px) {
-  .bento-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: 12px; }
-  .bento-2x2, .bento-2x1, .bento-1x2, .bento-1x1 { grid-column: span 2; grid-row: span 1; }
+  .feature-grid { grid-template-columns: 1fr; gap: 48px; }
+  .feature.reverse .feature-grid { direction: ltr; }
 }
+.feature-text h2 { margin-bottom: 20px; }
+.feature-text .lead { margin-bottom: 28px; }
+.feature-list { display: flex; flex-direction: column; gap: 16px; }
+.feature-list .item {
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.feature-list .item::before {
+  content: ""; flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--brand); color: #fff;
+  margin-top: 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-size: 14px; background-repeat: no-repeat; background-position: center;
+}
+.feature-list .item strong { display: block; color: var(--ink); margin-bottom: 4px; font-weight: 600; }
+.feature-list .item span { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
 
-/* Layout: 2x2 hero img + 2x1 stat + 2x1 + 1x1 + 1x1 + 1x1 + 1x1 */
-
-/* ============== SHOWCASE (Sticky scroll) ============== */
-.showcase {
-  padding: clamp(80px, 12vw, 160px) 0;
-  background: var(--bg-soft);
-}
-.showcase-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-  align-items: flex-start;
-}
-@media (max-width: 920px) { .showcase-grid { grid-template-columns: 1fr; gap: 40px; } }
-.showcase-sticky {
-  position: sticky; top: 100px;
+.feature-img {
   display: flex; justify-content: center; align-items: center;
 }
-.showcase-sticky img {
-  width: 100%; max-width: 480px;
-  filter: drop-shadow(0 30px 60px rgba(10,14,26,.18));
+.feature-img img {
+  width: 100%; max-width: 460px; height: auto;
+  filter: drop-shadow(0 40px 80px rgba(10,14,26,.16));
 }
-@media (max-width: 920px) { .showcase-sticky { position: static; } }
-.showcase-content { display: flex; flex-direction: column; gap: 80px; }
-.showcase-block h2 { margin-bottom: 16px; }
-.showcase-block .lead { margin-bottom: 24px; }
-.showcase-feature {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 16px 0; border-bottom: 1px solid var(--line);
-}
-.showcase-feature:last-child { border-bottom: none; }
-.showcase-feature .check {
-  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
-  background: var(--brand-soft); color: var(--brand);
-  display: grid; place-items: center; font-weight: 800;
-}
-.showcase-feature .check::after {
-  content: ""; width: 16px; height: 16px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232D5BFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
-  background-size: contain; background-repeat: no-repeat;
-}
-.showcase-feature .text strong { display: block; color: var(--ink); margin-bottom: 4px; font-weight: 600; }
-.showcase-feature .text span { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
 
 /* ============== STATS ============== */
 .stats {
-  padding: clamp(80px, 12vw, 160px) 0;
+  padding: clamp(100px, 13vw, 160px) 0;
   text-align: center;
+  border-top: 1px solid var(--line);
 }
-.stats h2 { margin-bottom: 16px; }
-.stats .lead { margin: 0 auto 60px; }
+.stats-head { max-width: 720px; margin: 0 auto 64px; }
+.stats-head h2 { margin-bottom: 16px; }
+.stats-head .lead { margin: 0 auto; }
 .stats-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  text-align: left;
 }
 @media (max-width: 760px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
 .stat {
-  padding: 32px 16px; border-radius: 20px;
-  background: var(--bg-soft);
-  transition: transform .25s, box-shadow .25s;
+  padding: 32px 28px; border: 1px solid var(--line); border-radius: 16px;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+  background: #fff;
 }
-.stat:hover { transform: translateY(-4px); box-shadow: 0 24px 60px -20px rgba(45,91,255,.2); }
+.stat:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: var(--shadow-2); }
 .stat .num {
   font-family: "Inter", sans-serif; font-weight: 900;
-  font-size: clamp(40px, 6vw, 72px); line-height: 1;
-  color: var(--brand); margin-bottom: 12px; letter-spacing: -.04em;
+  font-size: clamp(36px, 5vw, 56px); line-height: 1;
+  color: var(--ink); margin-bottom: 12px; letter-spacing: -.03em;
 }
+.stat .num .blue { color: var(--brand); }
 .stat .lbl { color: var(--muted); font-size: 14.5px; }
 
+/* ============== HOW IT WORKS ============== */
+.how { padding: clamp(100px, 13vw, 160px) 0; background: var(--bg-soft); }
+.how-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.how-head h2 { margin-bottom: 16px; }
+.how-head .lead { margin: 0 auto; }
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 760px) { .how-grid { grid-template-columns: 1fr; } }
+.how-step {
+  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  padding: 36px; transition: border-color .25s, transform .25s, box-shadow .25s;
+}
+.how-step:hover { border-color: var(--brand); transform: translateY(-4px); box-shadow: var(--shadow-2); }
+.how-step .num {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  background: var(--brand); color: #fff;
+  font-family: "Inter", sans-serif; font-weight: 700; font-size: 13px;
+  margin-bottom: 24px; letter-spacing: .04em;
+}
+.how-step h3 { margin-bottom: 12px; }
+.how-step p { color: var(--muted); font-size: 15.5px; }
+
 /* ============== AUDIENCES ============== */
-.audiences { padding: clamp(80px, 12vw, 140px) 0; background: var(--bg-soft); }
-.aud-head { text-align: center; max-width: 720px; margin: 0 auto clamp(40px, 6vw, 70px); }
+.audiences { padding: clamp(100px, 13vw, 160px) 0; border-top: 1px solid var(--line); }
+.aud-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.aud-head h2 { margin-bottom: 16px; }
 .aud-head .lead { margin: 0 auto; }
-.aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 @media (max-width: 760px) { .aud-grid { grid-template-columns: 1fr; } }
 .aud-card {
-  background: #fff; border-radius: 24px; padding: 40px;
-  border: 1px solid var(--line);
-  transition: transform .25s, border-color .25s, box-shadow .25s;
+  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  padding: 44px; transition: border-color .25s, transform .25s, box-shadow .25s;
 }
-.aud-card:hover { transform: translateY(-4px); border-color: var(--brand); box-shadow: 0 24px 60px -20px rgba(45,91,255,.2); }
-.aud-card .icon {
-  width: 56px; height: 56px; border-radius: 16px;
-  background: var(--brand-soft); display: grid; place-items: center;
-  font-size: 28px; margin-bottom: 24px;
+.aud-card:hover { border-color: var(--brand); transform: translateY(-4px); box-shadow: var(--shadow-2); }
+.aud-card .lbl {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  background: var(--bg-soft); color: var(--brand); font-size: 12px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
 }
-.aud-card h3 { margin-bottom: 12px; font-size: 24px; }
+.aud-card h3 { margin-bottom: 12px; font-size: clamp(22px, 2.4vw, 28px); }
 .aud-card p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
 .aud-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; font-size: 14.5px; }
 .aud-card ul li::before { content: "→ "; color: var(--brand); font-weight: 700; }
 
 /* ============== FAQ ============== */
-.faq { padding: clamp(80px, 12vw, 140px) 0; }
-.faq-head { text-align: center; max-width: 720px; margin: 0 auto clamp(40px, 6vw, 70px); }
+.faq { padding: clamp(100px, 13vw, 160px) 0; background: var(--bg-soft); }
+.faq-head { text-align: center; max-width: 720px; margin: 0 auto 60px; }
+.faq-head h2 { margin-bottom: 16px; }
 .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 .faq-item {
-  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px;
-  overflow: hidden; transition: border-color .2s, background .2s;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  overflow: hidden; transition: border-color .2s, box-shadow .2s;
 }
-.faq-item[open] { border-color: var(--brand); background: #fff; box-shadow: 0 8px 24px rgba(10,14,26,.06); }
+.faq-item[open] { border-color: var(--brand); box-shadow: var(--shadow-1); }
 .faq-item summary {
-  padding: 22px 24px; font-weight: 600; color: var(--ink); cursor: pointer;
+  padding: 22px 28px; font-weight: 600; color: var(--ink); cursor: pointer;
   display: flex; justify-content: space-between; align-items: center;
   list-style: none; font-size: 17px; gap: 16px;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
-  content: ""; flex-shrink: 0; width: 24px; height: 24px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7c93' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'/><line x1='5' y1='12' x2='19' y2='12'/></svg>");
+  content: ""; flex-shrink: 0; width: 22px; height: 22px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'/><line x1='5' y1='12' x2='19' y2='12'/></svg>");
   background-size: contain; background-repeat: no-repeat;
   transition: transform .2s;
 }
 .faq-item[open] summary::after { transform: rotate(45deg); }
-.faq-item .body { padding: 0 24px 24px; color: var(--muted); line-height: 1.7; font-size: 15.5px; }
+.faq-item .body { padding: 0 28px 24px; color: var(--muted); line-height: 1.7; font-size: 15.5px; }
 
 /* ============== CTA ============== */
 .cta {
   padding: clamp(120px, 16vw, 200px) 0;
   text-align: center; position: relative; overflow: hidden;
-  background: linear-gradient(135deg, var(--ink) 0%, #1a2640 100%); color: #fff;
+  background: var(--bg-dark); color: #fff;
 }
 .cta::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(900px 500px at 50% 50%, rgba(45,91,255,.25), transparent 60%);
+  background: radial-gradient(900px 500px at 50% 50%, rgba(45,91,255,.22), transparent 60%);
 }
 .cta-inner { position: relative; max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .cta h2 { color: #fff; margin-bottom: 24px; }
-.cta p { color: rgba(255,255,255,.7); font-size: clamp(17px, 1.5vw, 21px); margin-bottom: 40px; }
+.cta p { color: rgba(255,255,255,.7); font-size: clamp(17px, 1.5vw, 21px); margin-bottom: 40px; max-width: 680px; margin-left: auto; margin-right: auto; }
 .cta .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ============== FOOTER ============== */
-footer {
-  background: #050810; color: rgba(255,255,255,.55);
-  padding: 80px 0 32px;
-}
+footer { background: #050810; color: rgba(255,255,255,.55); padding: 80px 0 32px; }
 .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
 footer h4 {
@@ -429,6 +372,7 @@ footer h4 {
   font-family: "Inter", sans-serif; font-weight: 600;
 }
 footer .brand-block .logo { color: #fff; margin-bottom: 14px; }
+footer .brand-block .logo img { height: 44px; }
 footer .brand-block p { font-size: 14px; max-width: 320px; margin-bottom: 20px; line-height: 1.6; }
 footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 footer ul a { font-size: 14px; transition: color .15s; color: rgba(255,255,255,.55); }
@@ -463,7 +407,8 @@ footer .social a:hover { background: var(--brand); }
     <a href="#" class="logo"><img src="assets/logo.png" alt="FishConnect"></a>
     <div class="nav-links">
       <a href="#pedigree">Pedigree</a>
-      <a href="#features">Features</a>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#community">Community</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -477,9 +422,8 @@ footer .social a:hover { background: var(--brand); }
     <div class="hero-inner">
       <div>
         <span class="eyebrow reveal">Digital Fish Hub</span>
-        <h1 class="huge reveal reveal-1">ปลาทุกตัว<br><span class="blue">มีประวัติ</span><br>ทุกตัวมีค่า</h1>
-        <p class="lead reveal reveal-2">FishConnect คือแอปบันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา —
-          ทำให้ปลาทุกตัวที่คุณเพาะหรือซื้อมา <strong>มีประวัติย้อนกลับได้</strong> ขายได้ราคาดี</p>
+        <h1 class="t-huge reveal reveal-1">ปลาทุกตัว<br><span class="blue">มีประวัติ</span><br>ทุกตัวมีค่า</h1>
+        <p class="lead reveal reveal-2">FishConnect — แอปบันทึกสายพันธุ์ปลา ตลาดออนไลน์ และคอมมิวนิตี้ของคนเลี้ยงปลา ทุกตัวที่คุณเพาะหรือซื้อมา <strong>มีประวัติย้อนกลับได้</strong> ขายได้ราคาดี</p>
         <div class="hero-actions reveal reveal-3">
           <a href="#" class="btn-store" data-store="ios">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
@@ -490,30 +434,23 @@ footer .social a:hover { background: var(--brand); }
             <span class="label"><span class="small">Get it on</span><span class="big">Google Play</span></span>
           </a>
         </div>
-        <div class="hero-meta reveal">
-          <span><strong>🐟 ทุกชนิด</strong> ปลากัด ปลาคาร์ป ปลาทอง</span>
-          <span><strong>📜 QR ยืนยัน</strong> ทุกตัว</span>
-          <span><strong>🇹🇭 ไทย/อังกฤษ</strong></span>
-        </div>
       </div>
       <div class="hero-img reveal">
-        <img src="screenshots/01-hero-login-profile.png" alt="FishConnect app preview">
+        <img src="screenshots/01-hero-login-profile.png" alt="FishConnect">
       </div>
     </div>
   </div>
-  <div class="scroll-down" aria-hidden="true"></div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
 <section class="marquee">
   <div class="marquee-track">
-    <img src="screenshots/02-pedigree-pair.png" alt="Pedigree">
-    <img src="screenshots/06-my-fish.png" alt="My Fish">
-    <img src="screenshots/07-marketplace.png" alt="Marketplace">
-    <img src="screenshots/05-community.png" alt="Community">
-    <img src="screenshots/08-my-product.png" alt="My Product">
-    <img src="screenshots/01-hero-login-profile.png" alt="Login">
-    <!-- duplicate for seamless loop -->
+    <img src="screenshots/02-pedigree-pair.png" alt="">
+    <img src="screenshots/06-my-fish.png" alt="">
+    <img src="screenshots/07-marketplace.png" alt="">
+    <img src="screenshots/05-community.png" alt="">
+    <img src="screenshots/08-my-product.png" alt="">
+    <img src="screenshots/01-hero-login-profile.png" alt="">
     <img src="screenshots/02-pedigree-pair.png" alt="">
     <img src="screenshots/06-my-fish.png" alt="">
     <img src="screenshots/07-marketplace.png" alt="">
@@ -526,132 +463,117 @@ footer .social a:hover { background: var(--brand); }
 <!-- ============ STATEMENT ============ -->
 <section class="statement">
   <div class="statement-inner">
-    <h2 class="huge reveal">ปลาราคาแพง<br><span class="strike">ไม่ใช่ปัญหา</span><br><span class="blue">"ของไม่ตรงปก"</span> คือ.</h2>
+    <h2 class="t-huge reveal">ปลาราคาแพง<br><span class="strike">ไม่ใช่ปัญหา</span><br><span class="blue">"ของไม่ตรงปก"</span> คือ.</h2>
     <p class="reveal reveal-2">ปลากัด 1 ตัวมูลค่าหลักหมื่น ปลาคาร์ปหลักแสน — แต่จะรู้ได้ยังไงว่าปลาที่ซื้อมาเป็นสายพันธุ์ตามที่อ้าง?
       FishConnect แก้ปัญหานี้ด้วยการทำให้ทุกตัวมีประวัติ ตรวจสอบกลับไปยังผู้เพาะต้นทางได้</p>
   </div>
 </section>
 
-<!-- ============ BENTO GRID ============ -->
-<section class="bento" id="features">
+<!-- ============ FEATURE: PEDIGREE ============ -->
+<section class="feature no-border" id="pedigree">
   <div class="container">
-    <div class="bento-head">
-      <span class="eyebrow reveal">Everything in One App</span>
-      <h2 class="huge reveal reveal-1">ครบทุกอย่าง<br>ที่คนเลี้ยงปลาต้องการ</h2>
-      <p class="lead reveal reveal-2">บันทึก · ตรวจสอบ · ขาย · เชื่อมต่อ — ในแอปเดียว</p>
-    </div>
-
-    <div class="bento-grid">
-      <!-- Big Pedigree (2x2) -->
-      <div class="bento-cell bento-2x2 brand reveal">
-        <div class="pad">
-          <h3 class="med">Smart Pedigree</h3>
-          <p>Family Tree แสดง พ่อ-แม่-ลูก ในหน้าเดียว · QR Code ตรวจสอบประวัติได้ทันที · ทุกตัวโอนสิทธิ์ได้</p>
-        </div>
-        <div class="img-wrap"><img src="screenshots/02-pedigree-pair.png" alt="Pedigree"></div>
-      </div>
-
-      <!-- Marketplace (1x2) -->
-      <div class="bento-cell bento-1x2 reveal reveal-1">
-        <div class="pad">
-          <h3 class="med">Marketplace</h3>
-          <p>ขายปลาในชื่อจริง พร้อมประวัติ ลูกค้ามั่นใจ ราคาดีกว่า</p>
-        </div>
-        <div class="img-wrap"><img src="screenshots/07-marketplace.png" alt="Marketplace"></div>
-      </div>
-
-      <!-- Community (2x1) -->
-      <div class="bento-cell bento-2x1 dark reveal reveal-2">
-        <div class="pad" style="display:flex;gap:24px;align-items:center;height:100%;flex-wrap:wrap">
-          <div style="flex:1;min-width:200px">
-            <h3 class="med">Community</h3>
-            <p>เครือข่ายของคนเลี้ยงปลาตัวจริง โพสต์ แชร์ ขาย ถูกยืนยัน</p>
-          </div>
-          <div style="font-size:120px;line-height:1;opacity:.85">💬</div>
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <span class="eyebrow">Smart Pedigree</span>
+        <h2 class="t-big">สายพันธุ์ที่<br>ตรวจสอบกลับได้</h2>
+        <p class="lead">Family Tree แสดงพ่อ-แม่-ลูกในหน้าเดียว ผู้ซื้อสแกน QR เดียวเห็นประวัติย้อนหลังครบ</p>
+        <div class="feature-list">
+          <div class="item"><div><strong>Family Tree ในหน้าเดียว</strong><span>เห็น Father, Mother, Child พร้อมรูปและสายพันธุ์</span></div></div>
+          <div class="item"><div><strong>QR Code เฉพาะตัว</strong><span>ปลาทุกตัวมี QR ของตัวเอง — สแกนตรวจสอบได้ทันที</span></div></div>
+          <div class="item"><div><strong>โอนสิทธิ์ได้</strong><span>เมื่อขาย record ของปลาตามไปยังเจ้าของใหม่</span></div></div>
+          <div class="item"><div><strong>เก็บประวัติครบ</strong><span>อายุ สุขภาพ รูปภาพ การให้อาหาร การเพาะ</span></div></div>
         </div>
       </div>
-
-      <!-- My Fish (1x1) -->
-      <div class="bento-cell bento-1x1 reveal">
-        <div class="pad" style="height:100%">
-          <h3 class="med">My Fish</h3>
-          <p>ปลาของคุณคือสินทรัพย์ดิจิทัล กรอง ค้น แก้ไข</p>
-        </div>
-      </div>
-
-      <!-- My Product (1x1) -->
-      <div class="bento-cell bento-1x1 reveal reveal-1">
-        <div class="pad" style="height:100%">
-          <h3 class="med">My Product</h3>
-          <p>หน้าควบคุมสินค้าสำหรับผู้ขาย แก้ไข พิมพ์ QR ได้ทันที</p>
-        </div>
-      </div>
-
-      <!-- Multi-language (1x1) -->
-      <div class="bento-cell bento-1x1 reveal reveal-2">
-        <div class="pad" style="height:100%">
-          <h3 class="med">2 ภาษา</h3>
-          <p>ไทย/อังกฤษ สลับได้ทุกที่ในแอป</p>
-        </div>
-      </div>
-
-      <!-- Level (1x1) -->
-      <div class="bento-cell bento-1x1 brand reveal reveal-3">
-        <div class="pad" style="height:100%;display:flex;flex-direction:column;justify-content:space-between">
-          <h3 class="med">Trust Level</h3>
-          <div style="font-size:48px;font-weight:900;font-family:'Inter';letter-spacing:-.04em">★ Lvl 1</div>
-        </div>
+      <div class="feature-img reveal reveal-1">
+        <img src="screenshots/02-pedigree-pair.png" alt="Smart Pedigree">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ STICKY SHOWCASE ============ -->
-<section class="showcase" id="pedigree">
+<!-- ============ FEATURE: MY FISH ============ -->
+<section class="feature alt reverse">
   <div class="container">
-    <div class="showcase-grid">
-      <div class="showcase-sticky reveal">
-        <img src="screenshots/02-pedigree-pair.png" alt="Pedigree">
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <span class="eyebrow">My Fish · Digital Assets</span>
+        <h2 class="t-big">ปลาของคุณ<br>คือสินทรัพย์ดิจิทัล</h2>
+        <p class="lead">จัดระเบียบปลาทุกตัวที่เลี้ยงในที่เดียว แยกตามสายพันธุ์ สถานะ และอายุ</p>
+        <div class="feature-list">
+          <div class="item"><div><strong>กรองตามสถานะ</strong><span>Healthy, Sick, Breeding, Juvenile</span></div></div>
+          <div class="item"><div><strong>ค้นหา</strong><span>ด้วยชื่อ สายพันธุ์ อายุ</span></div></div>
+          <div class="item"><div><strong>เก็บประวัติ</strong><span>รูปภาพ สุขภาพ การให้อาหาร การเพาะ</span></div></div>
+          <div class="item"><div><strong>โอนได้</strong><span>ทุก record ติดกับเจ้าของ — โอนสิทธิ์ผ่านแอป</span></div></div>
+        </div>
       </div>
-      <div class="showcase-content">
-        <div class="showcase-block reveal">
-          <span class="eyebrow">Smart Pedigree</span>
-          <h2 class="big">สายพันธุ์ที่ตรวจสอบได้<br>ทุกชั้นย้อนกลับ</h2>
-          <p class="lead">บันทึกพ่อ-แม่-ลูกของปลาทุกตัวเป็น Family Tree ที่เห็นในหน้าเดียว
-            ผู้ซื้อสแกน QR เดียวเห็นประวัติย้อนหลังครบ</p>
-          <div style="margin-top:28px">
-            <div class="showcase-feature">
-              <div class="check"></div>
-              <div class="text"><strong>Family Tree ในหน้าเดียว</strong><span>เห็น Father, Mother, Child พร้อมรูปและสายพันธุ์ — เข้าใจได้ทันที</span></div>
-            </div>
-            <div class="showcase-feature">
-              <div class="check"></div>
-              <div class="text"><strong>QR Code เฉพาะตัว</strong><span>ปลาทุกตัวมี QR ของตัวเอง — สแกนตรวจสอบประวัติได้ทันที ก่อนตัดสินใจซื้อ</span></div>
-            </div>
-            <div class="showcase-feature">
-              <div class="check"></div>
-              <div class="text"><strong>โอนสิทธิ์ได้</strong><span>เมื่อขาย record ของปลาตามไปยังเจ้าของใหม่ ประวัติไม่ขาดสาย</span></div>
-            </div>
-            <div class="showcase-feature">
-              <div class="check"></div>
-              <div class="text"><strong>เก็บประวัติครบ</strong><span>อายุ สุขภาพ รูปภาพ การให้อาหาร การเพาะ — เก็บไว้ในเรคคอร์ดเดียว</span></div>
-            </div>
-          </div>
-        </div>
+      <div class="feature-img reveal reveal-1">
+        <img src="screenshots/06-my-fish.png" alt="My Fish">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="showcase-block reveal">
-          <span class="eyebrow">For Breeders</span>
-          <h2 class="big">เพาะแบบมีชื่อเสียง<br>ขายแบบมีราคา</h2>
-          <p class="lead">สร้าง portfolio สายพันธุ์ที่เป็น proof ของตัวเอง — ทุกตัวที่คุณส่งออกไป มีประวัติติดตัว
-            ลูกค้าจำได้ บอกต่อได้ ขายต่อได้ราคา</p>
+<!-- ============ FEATURE: MARKETPLACE ============ -->
+<section class="feature" id="marketplace">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <span class="eyebrow">Marketplace · Smart Exchange</span>
+        <h2 class="t-big">ตลาดของปลา<br>ที่มีประวัติ</h2>
+        <p class="lead">ขายปลาในชื่อจริง พร้อมประวัติสายพันธุ์ครบ — ลูกค้ามั่นใจ ผู้ขายได้ราคาที่ปลาควรจะได้</p>
+        <div class="feature-list">
+          <div class="item"><div><strong>ลงขายปลา</strong><span>ติดราคา รูป ที่อยู่ พร้อมสถานะ Active/Draft/Sold</span></div></div>
+          <div class="item"><div><strong>ตะกร้า + Cart</strong><span>เหมือน e-commerce ปกติ</span></div></div>
+          <div class="item"><div><strong>QR ติดมาด้วย</strong><span>ปลาทุกตัวมีประวัติ ตรวจสอบได้</span></div></div>
+          <div class="item"><div><strong>ติดตาม + แชท</strong><span>view, Favorite, แชทระหว่างผู้ซื้อ-ผู้ขาย</span></div></div>
         </div>
+      </div>
+      <div class="feature-img reveal reveal-1">
+        <img src="screenshots/07-marketplace.png" alt="Marketplace">
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="showcase-block reveal">
-          <span class="eyebrow">For Buyers</span>
-          <h2 class="big">ซื้อแบบมั่นใจ<br>ไม่กลัวโดนหลอก</h2>
-          <p class="lead">ดูประวัติย้อนหลังทุกตัวก่อนซื้อ สแกน QR หน้าฟาร์มเลยก็ได้
-            ปลาที่ซื้อมา record ตามไปด้วย — ขายต่อได้ราคาดีกว่า เพราะของมีประวัติ</p>
+<!-- ============ FEATURE: COMMUNITY ============ -->
+<section class="feature alt reverse" id="community">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <span class="eyebrow">Community · Social Network</span>
+        <h2 class="t-big">เครือข่ายของ<br>คนรักปลาตัวจริง</h2>
+        <p class="lead">โพสต์เรื่องปลา แชร์ความรู้ ขายตรงในกลุ่ม — คอมมิวนิตี้ที่ทุกคนยืนยันเป็นเจ้าของปลาจริง</p>
+        <div class="feature-list">
+          <div class="item"><div><strong>โพสต์ + Hashtag</strong><span>รูป คำบรรยาย แท็ก</span></div></div>
+          <div class="item"><div><strong>Like / Comment / Share</strong><span>เหมือน social network</span></div></div>
+          <div class="item"><div><strong>กลุ่มย่อยตามสายพันธุ์</strong><span>ปลากัด ปลาคาร์ป ฯลฯ</span></div></div>
+          <div class="item"><div><strong>Trust Level</strong><span>ใช้งานนาน ยิ่ง trusted</span></div></div>
         </div>
+      </div>
+      <div class="feature-img reveal reveal-1">
+        <img src="screenshots/05-community.png" alt="Community">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: MY PRODUCT ============ -->
+<section class="feature">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <span class="eyebrow">My Product · Digital Stock</span>
+        <h2 class="t-big">จัดการสินค้า<br>เป็นระเบียบ</h2>
+        <p class="lead">หน้าควบคุมสินค้าสำหรับผู้ขาย ดูสถานะ แก้ไข พิมพ์ QR สำหรับติดสินค้าได้ทันที</p>
+        <div class="feature-list">
+          <div class="item"><div><strong>กรองตามสถานะ</strong><span>Draft, Active, Sold Out, Paused</span></div></div>
+          <div class="item"><div><strong>ดู Engagement</strong><span>view count, Favorite count แต่ละสินค้า</span></div></div>
+          <div class="item"><div><strong>QR ในตัว</strong><span>แสดง / พิมพ์ติดสินค้าได้</span></div></div>
+          <div class="item"><div><strong>แก้ไขด่วน</strong><span>เปลี่ยนสถานะ ลบสินค้าได้ทันที</span></div></div>
+        </div>
+      </div>
+      <div class="feature-img reveal reveal-1">
+        <img src="screenshots/08-my-product.png" alt="My Product">
       </div>
     </div>
   </div>
@@ -660,41 +582,79 @@ footer .social a:hover { background: var(--brand); }
 <!-- ============ STATS ============ -->
 <section class="stats">
   <div class="container">
-    <span class="eyebrow reveal">By the Numbers</span>
-    <h2 class="huge reveal reveal-1">สิ่งที่<br>FishConnect ทำให้คุณ</h2>
-    <p class="lead reveal reveal-2">ออกแบบมาเพื่อให้คนเลี้ยงปลาทำงานง่ายขึ้น</p>
-    <div class="stats-grid" style="margin-top:60px">
-      <div class="stat reveal"><div class="num">100%</div><div class="lbl">ปลาทุกตัวมี QR</div></div>
-      <div class="stat reveal reveal-1"><div class="num">2 นาที</div><div class="lbl">บันทึกปลาตัวแรก</div></div>
-      <div class="stat reveal reveal-2"><div class="num">2 ภาษา</div><div class="lbl">ไทย / อังกฤษ</div></div>
-      <div class="stat reveal reveal-3"><div class="num">฿0</div><div class="lbl">ค่าใช้จ่ายเริ่มต้น</div></div>
+    <div class="stats-head">
+      <span class="eyebrow reveal">By the Numbers</span>
+      <h2 class="t-huge reveal reveal-1">ทำไมต้อง<br>FishConnect</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num"><span class="blue">100%</span></div><div class="lbl">ปลาทุกตัวมี QR ตรวจสอบได้</div></div>
+      <div class="stat reveal reveal-1"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600">นาที</span></div><div class="lbl">บันทึกปลาตัวแรก</div></div>
+      <div class="stat reveal reveal-2"><div class="num">2 <span style="font-size:.6em;color:var(--muted);font-weight:600">ภาษา</span></div><div class="lbl">ไทย / อังกฤษ ใช้งานได้</div></div>
+      <div class="stat reveal reveal-3"><div class="num"><span class="blue">฿0</span></div><div class="lbl">ค่าใช้จ่ายเริ่มต้น</div></div>
     </div>
   </div>
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section class="audiences" id="how">
+<section class="how" id="how">
   <div class="container">
-    <div class="aud-head">
+    <div class="how-head">
       <span class="eyebrow reveal">How It Works</span>
-      <h2 class="huge reveal reveal-1">เริ่มใช้ใน<br>3 ขั้นตอน</h2>
+      <h2 class="t-huge reveal reveal-1">เริ่มใช้ใน 3 ขั้นตอน</h2>
       <p class="lead reveal reveal-2">ไม่ต้องรู้เทคนิค — แค่มี smartphone</p>
     </div>
-    <div class="aud-grid" style="grid-template-columns:repeat(3,1fr);gap:24px">
-      <div class="aud-card reveal">
-        <div class="icon" style="font-family:'Inter';font-size:24px;font-weight:800;color:var(--brand)">1</div>
-        <h3>ดาวน์โหลด</h3>
-        <p>โหลดฟรีบน iOS หรือ Android — สมัครด้วย email หรือ Google ใน 30 วินาที</p>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="num">STEP 1</div>
+        <h3 class="t-med">ดาวน์โหลด</h3>
+        <p>โหลด FishConnect ฟรีบน iOS หรือ Android — สมัครด้วย email หรือ Google ใน 30 วินาที</p>
       </div>
-      <div class="aud-card reveal reveal-1">
-        <div class="icon" style="font-family:'Inter';font-size:24px;font-weight:800;color:var(--brand)">2</div>
-        <h3>บันทึก</h3>
+      <div class="how-step reveal reveal-1">
+        <div class="num">STEP 2</div>
+        <h3 class="t-med">บันทึก</h3>
         <p>ถ่ายรูป + กรอกพ่อแม่ (ถ้ามี) — ระบบสร้าง record + QR ให้อัตโนมัติ</p>
       </div>
-      <div class="aud-card reveal reveal-2">
-        <div class="icon" style="font-family:'Inter';font-size:24px;font-weight:800;color:var(--brand)">3</div>
-        <h3>ขาย / แลก</h3>
-        <p>ลง Marketplace หรือแชร์ใน Community — ลูกค้าสแกน QR ตรวจสอบประวัติก่อนซื้อ</p>
+      <div class="how-step reveal reveal-2">
+        <div class="num">STEP 3</div>
+        <h3 class="t-med">ขาย / แลก</h3>
+        <p>ลง Marketplace หรือแชร์ใน Community — ลูกค้าสแกน QR ตรวจสอบประวัติได้</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCES ============ -->
+<section class="audiences">
+  <div class="container">
+    <div class="aud-head">
+      <span class="eyebrow reveal">For Everyone</span>
+      <h2 class="t-huge reveal reveal-1">เหมาะกับใคร</h2>
+      <p class="lead reveal reveal-2">ไม่ว่าคุณจะเพาะปลา หรือซื้อปลา FishConnect ออกแบบมาเพื่อคุณ</p>
+    </div>
+    <div class="aud-grid">
+      <div class="aud-card reveal">
+        <span class="lbl">For Breeders</span>
+        <h3>สำหรับผู้เพาะ</h3>
+        <p>สร้างชื่อเสียง ขายปลาได้ราคา ประวัติทุกตัวไม่หาย</p>
+        <ul>
+          <li>สร้าง portfolio สายพันธุ์ที่เป็น proof ของตัวเอง</li>
+          <li>ขายในนามจริง — ลูกค้าเห็นประวัติทุกตัว</li>
+          <li>ป้องกันคนแอบอ้างนำชื่อสายพันธุ์ไปใช้</li>
+          <li>เก็บ Level สะสม เป็น breeder ที่ trusted</li>
+        </ul>
+        <a href="#download" class="btn btn-primary">เริ่มเพาะแบบมีประวัติ</a>
+      </div>
+      <div class="aud-card reveal reveal-1">
+        <span class="lbl">For Buyers</span>
+        <h3>สำหรับผู้ซื้อ</h3>
+        <p>ซื้อปลาแบบ verify ได้ ไม่กลัวโดนหลอก</p>
+        <ul>
+          <li>ดูประวัติย้อนหลังทุกตัวก่อนซื้อ</li>
+          <li>สแกน QR หน้าฟาร์ม / ก่อนโอนเงิน</li>
+          <li>ปลาที่ซื้อมา record ตามไปด้วยตลอด</li>
+          <li>ขายต่อได้ราคาดีกว่า เพราะของมีประวัติ</li>
+        </ul>
+        <a href="#download" class="btn btn-primary">เริ่มซื้อแบบมั่นใจ</a>
       </div>
     </div>
   </div>
@@ -705,7 +665,7 @@ footer .social a:hover { background: var(--brand); }
   <div class="container">
     <div class="faq-head">
       <span class="eyebrow reveal">FAQ</span>
-      <h2 class="huge reveal reveal-1">คำถามที่<br>พบบ่อย</h2>
+      <h2 class="t-huge reveal reveal-1">คำถามที่พบบ่อย</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item reveal"><summary>FishConnect ใช้ฟรีหรือเสียเงิน?</summary><div class="body">ใช้ฟรีในการบันทึกปลา สร้างประวัติ และเข้าคอมมิวนิตี้ Marketplace อาจมีค่าธรรมเนียมเล็กน้อยเมื่อขายสำเร็จ — ไม่มีค่าใช้จ่ายแอบแฝง</div></details>
@@ -721,7 +681,7 @@ footer .social a:hover { background: var(--brand); }
 <!-- ============ CTA ============ -->
 <section class="cta" id="download">
   <div class="cta-inner">
-    <h2 class="mega reveal">เริ่มเลย.</h2>
+    <h2 class="t-mega reveal">เริ่มเลย.</h2>
     <p class="reveal reveal-1">ดาวน์โหลดฟรี ใช้ได้ทันที — ไม่มีบัตรเครดิต ไม่มีพันธะ บันทึกปลาตัวแรกใน 2 นาที</p>
     <div class="actions reveal reveal-2">
       <a href="#" class="btn-store" data-store="ios">
@@ -752,8 +712,9 @@ footer .social a:hover { background: var(--brand); }
       <div>
         <h4>Product</h4>
         <ul>
-          <li><a href="#features">Features</a></li>
           <li><a href="#pedigree">Pedigree</a></li>
+          <li><a href="#marketplace">Marketplace</a></li>
+          <li><a href="#community">Community</a></li>
           <li><a href="#download">ดาวน์โหลด</a></li>
         </ul>
       </div>
